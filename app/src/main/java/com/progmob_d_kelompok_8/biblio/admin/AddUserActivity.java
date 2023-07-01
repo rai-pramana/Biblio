@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -29,9 +31,11 @@ public class AddUserActivity extends AppCompatActivity {
     private DatabaseHelper db;
     final int REQUEST_CODE_GALLERY = 999;
     private boolean isImageExist = false;
-    EditText etNama, etEmail, etNoHP, etJenisKelamin, etAlamat, etRole, etPassword;
+    EditText etNama, etEmail, etNoHP, etAlamat, etPassword;
     Button btAddUser;
     ImageView chooseImageView;
+    RadioGroup rgJenisKelamin, rgRole;
+    RadioButton rbJenisKelamin, rbRole;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +47,9 @@ public class AddUserActivity extends AppCompatActivity {
         etNama = findViewById(R.id.etNama);
         etEmail = findViewById(R.id.etEmail);
         etNoHP = findViewById(R.id.etNoHP);
-        etJenisKelamin = findViewById(R.id.etJenisKelamin);
+        rgJenisKelamin = findViewById(R.id.rgJenisKelamin);
         etAlamat = findViewById(R.id.etAlamat);
-        etRole = findViewById(R.id.etRole);
+        rgRole = findViewById(R.id.rgRole);
         etPassword = findViewById(R.id.etPassword);
         btAddUser = findViewById(R.id.btAddUser);
         chooseImageView = findViewById(R.id.chooseImageView);
@@ -63,10 +67,14 @@ public class AddUserActivity extends AppCompatActivity {
                 String nama = etNama.getText().toString();
                 String email = etEmail.getText().toString();
                 String noHP = etNoHP.getText().toString();
-                String jenisKelamin = etJenisKelamin.getText().toString();
                 String alamat = etAlamat.getText().toString();
-                String role = etRole.getText().toString();
                 String password = etPassword.getText().toString();
+
+                rbJenisKelamin = findViewById(rgJenisKelamin.getCheckedRadioButtonId());
+                String jenisKelamin = rbJenisKelamin.getText().toString();
+
+                rbRole = findViewById(rgRole.getCheckedRadioButtonId());
+                String role = rbRole.getText().toString();
 
                 if(nama.isEmpty()
                         || email.isEmpty()
@@ -104,9 +112,7 @@ public class AddUserActivity extends AppCompatActivity {
         etNama.setText("");
         etEmail.setText("");
         etNoHP.setText("");
-        etJenisKelamin.setText("");
         etAlamat.setText("");
-        etRole.setText("");
         etPassword.setText("");
         chooseImageView.setImageResource(R.drawable.baseline_image_24);
         isImageExist = false;
