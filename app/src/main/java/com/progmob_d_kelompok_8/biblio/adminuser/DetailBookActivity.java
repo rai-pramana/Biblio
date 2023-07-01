@@ -35,7 +35,8 @@ public class DetailBookActivity extends AppCompatActivity {
             , tvGenre
             , tvPenulis
             , tvPenerbit
-            , tvPembaca;
+            , tvPembaca
+            , tvReview;
     ImageView ivImg;
     String judulBuku;
 
@@ -51,6 +52,7 @@ public class DetailBookActivity extends AppCompatActivity {
         btDelete = findViewById(R.id.bt_delete);
         btListAdd = findViewById(R.id.bt_list_add);
         btListUpdate = findViewById(R.id.bt_list_update);
+        tvReview = findViewById(R.id.tv_review);
 
         tvTitle = findViewById(R.id.tv_title);
         tvRank = findViewById(R.id.tv_rank);
@@ -83,9 +85,21 @@ public class DetailBookActivity extends AppCompatActivity {
         btListUpdate.setVisibility(View.VISIBLE);
         btEdit.setVisibility(View.VISIBLE);
         btDelete.setVisibility(View.VISIBLE);
+        tvReview.setVisibility(View.VISIBLE);
     }
 
     private void setButton() {
+        if (!db.isBookListed(session.getBookIdDetail())){
+            tvReview.setVisibility(View.GONE);
+        } else {
+            tvReview.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(DetailBookActivity.this, ReviewActivity.class));
+                }
+            });
+        }
+
         if (session.isUserAdmin()){
             btListAdd.setVisibility(View.GONE);
             btListUpdate.setVisibility(View.GONE);

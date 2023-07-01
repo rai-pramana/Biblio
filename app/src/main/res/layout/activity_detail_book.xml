@@ -209,7 +209,7 @@
             android:src="@drawable/baseline_edit_note_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
-            app:layout_constraintTop_toBottomOf="@+id/tv_sinopsis" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_review" />
 
         <ImageButton
             android:id="@+id/bt_delete"
@@ -232,7 +232,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
             app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
-            app:layout_constraintTop_toBottomOf="@+id/tv_sinopsis"
+            app:layout_constraintTop_toBottomOf="@+id/tv_review"
             app:srcCompat="@drawable/baseline_playlist_add_24" />
 
         <ImageButton
@@ -241,12 +241,12 @@
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/succes"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
             app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
-            app:layout_constraintTop_toBottomOf="@+id/tv_sinopsis"
-            app:srcCompat="@drawable/baseline_edit_note_24_green"
-            android:backgroundTint="@color/succes"/>
+            app:layout_constraintTop_toBottomOf="@+id/tv_review"
+            app:srcCompat="@drawable/baseline_edit_note_24_green" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -256,6 +256,19 @@
             app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
             app:layout_constraintTop_toBottomOf="@+id/tv_title"
             app:srcCompat="@drawable/baseline_star_rate_24" />
+
+        <TextView
+            android:id="@+id/tv_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Lihat Semua Review"
+            android:textAlignment="center"
+            android:textColor="#2196F3"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sinopsis" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

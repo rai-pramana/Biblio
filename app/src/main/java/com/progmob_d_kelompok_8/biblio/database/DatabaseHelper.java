@@ -629,6 +629,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
+    public boolean isBookListed(int idBuku){
+        String selectQuery = "select distinct * from  " + "tb_list_detail" + " where " +
+                "id_buku" + " = " + "'"+idBuku+"'";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        cursor.moveToFirst();
+        if (cursor.getCount() > 0) {
+            return true;
+        }
+
+        cursor.close();
+
+        return false;
+    }
+
     public float getAverageBookScore(int idBuku){
         String selectQuery = "select ifnull(avg(skor),0.0) from tb_list_detail " +
                 "where id_buku =" + "'" + idBuku + "' and skor != '-'";
@@ -841,6 +858,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getReviewedFavoriteBookData(int idUser, String statusFavorit){
         String selectQuery = "select l.id_buku, b.judul_buku, b.tgl_terbit, l.tgl_mulai, l.tgl_selesai, l.review, l.skor, b.gambar_sampul from tb_list_detail as l inner join tb_buku as b on b.id_buku = l.id_buku where l.id_pengguna =" + "'" +idUser+ "' and l.status_favorit = '" +statusFavorit+ "'";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        return cursor;
+    }
+
+    public Cursor getReviewBook(int idBuku){
+        String selectQuery = "select p.id_pengguna, p.nama, l.tgl_selesai, l.review, l.skor, p.foto from tb_list_detail as l inner join tb_pengguna as p on p.id_pengguna = l.id_pengguna where id_buku ='"+idBuku+"' and review != ''";
 
         SQLiteDatabase db = this.getReadableDatabase();
 

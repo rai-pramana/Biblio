@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Admin"
         tools:targetApi="31">
         <activity
+            android:name=".adminuser.ReviewActivity"
+            android:exported="false" />
+        <activity
             android:name=".user.ListActivity"
             android:exported="false"
             android:label="Tambah List"
@@ -37,9 +40,9 @@
             android:name=".adminuser.UserUpdateActivity"
             android:exported="false"
             android:label="Update User"
-            android:parentActivityName=".admin.DetailUserActivity" />
+            android:parentActivityName=".adminuser.DetailUserActivity" />
         <activity
-            android:name=".admin.DetailUserActivity"
+            android:name=".adminuser.DetailUserActivity"
             android:exported="false"
             android:label="Detail User"
             android:parentActivityName=".admin.MainAdminActivity" />
@@ -62,7 +65,7 @@
             android:name=".RegisterActivity"
             android:exported="false"
             android:label="Register"
-            android:parentActivityName=".LoginActivity"/>
+            android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="false"
@@ -75,7 +78,7 @@
         <activity
             android:name=".admin.MainAdminActivity"
             android:exported="true"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.progmob_d_kelompok_8.biblio.admin;
+package com.progmob_d_kelompok_8.biblio.adminuser;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,7 +16,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.progmob_d_kelompok_8.biblio.R;
-import com.progmob_d_kelompok_8.biblio.adminuser.UserUpdateActivity;
 import com.progmob_d_kelompok_8.biblio.database.DatabaseHelper;
 import com.progmob_d_kelompok_8.biblio.tool.Session;
 
@@ -66,28 +65,51 @@ public class DetailUserActivity extends AppCompatActivity {
         tvSkorMean = findViewById(R.id.tv_skor_mean);
         ivImg = findViewById(R.id.iv_foto);
 
-        btEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                session.setFromAdminProfileFragment(false);
-                session.setFromUserProfileFragment(false);
-                startActivity(new Intent(DetailUserActivity.this, UserUpdateActivity.class));
-            }
-        });
+        showButton();
+        setButton();
+        showData();
 
-        btDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDialogDelete();
-            }
-        });
     }
 
     @Override
     public void onResume() {
         super.onResume();
 
+        showButton();
+        setButton();
         showData();
+    }
+
+    private void showButton() {
+        btEdit.setVisibility(View.VISIBLE);
+        btDelete.setVisibility(View.VISIBLE);
+        tvRole.setVisibility(View.VISIBLE);
+    }
+
+    private void setButton() {
+
+        if (session.isUserAdmin()){
+            btEdit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    session.setFromAdminProfileFragment(false);
+                    session.setFromUserProfileFragment(false);
+                    startActivity(new Intent(DetailUserActivity.this, UserUpdateActivity.class));
+                }
+            });
+
+            btDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    showDialogDelete();
+                }
+            });
+
+        } else {
+            btEdit.setVisibility(View.GONE);
+            btDelete.setVisibility(View.GONE);
+            tvRole.setVisibility(View.GONE);
+        }
     }
 
     private void showData() {
