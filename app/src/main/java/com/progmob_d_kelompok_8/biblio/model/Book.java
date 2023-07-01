@@ -1,7 +1,7 @@
 package com.progmob_d_kelompok_8.biblio.model;
 
 public class Book {
-    private int idBuku, idPengguna, jumlahPembaca, peringkat;
+    private int idBuku, idPengguna, jumlahPembaca, peringkat, popularitas;
     private String namaJenisBuku, namaGenre, namaPenulis, namaPenerbit, judulBuku, tglTerbit, sinopsis;
     private float skor;
     private byte[] gambarSampul;
@@ -18,7 +18,8 @@ public class Book {
             , float skor
             , byte[] gambarSampul
             , int jumlahPembaca
-            , int peringkat) {
+            , int peringkat
+            , int popularitas) {
         this.idBuku = idBuku;
         this.idPengguna = idPengguna;
         this.namaJenisBuku = namaJenisBuku;
@@ -32,6 +33,7 @@ public class Book {
         this.gambarSampul = gambarSampul;
         this.jumlahPembaca = jumlahPembaca;
         this. peringkat = peringkat;
+        this.popularitas = popularitas;
     }
 
     public int getIdBuku() {
@@ -136,5 +138,13 @@ public class Book {
 
     public int getPeringkat() {
         return peringkat;
+    }
+
+    public int getPopularitas() {
+        return popularitas;
+    }
+
+    public void setPopularitas(int popularitas) {
+        this.popularitas = popularitas;
     }
 }

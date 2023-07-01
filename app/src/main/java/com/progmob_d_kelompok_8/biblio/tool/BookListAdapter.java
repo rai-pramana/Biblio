@@ -19,14 +19,17 @@ import java.util.ArrayList;
 public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ListViewHolder> {
 
     private ArrayList<Book> listBook;
+    private boolean isFromRankBookFragment, isFromMostPopularFragment;
     private OnItemClickCallback onItemClickCallback;
 
     public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback;
     }
 
-    public BookListAdapter(ArrayList<Book> list) {
+    public BookListAdapter(ArrayList<Book> list, boolean isFromRankBookFragment, boolean isFromMostPopularFragment) {
         this.listBook = list;
+        this.isFromRankBookFragment = isFromRankBookFragment;
+        this.isFromMostPopularFragment = isFromMostPopularFragment;
     }
 
     public void setFilteredList(ArrayList<Book> filteredList){
@@ -45,6 +48,16 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ListVi
     @Override
     public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
         Book book = listBook.get(position);
+
+        if (isFromRankBookFragment) {
+            holder.tvRank.setVisibility(View.VISIBLE);
+            holder.tvRank.setText(String.valueOf(book.getPeringkat()));
+        } else if (isFromMostPopularFragment){
+            holder.tvRank.setVisibility(View.VISIBLE);
+            holder.tvRank.setText(String.valueOf(book.getPopularitas()));
+        } else {
+            holder.tvRank.setVisibility(View.GONE);
+        }
 
         byte[] image = book.getGambarSampul();
         Bitmap bitmap = BitmapFactory.decodeByteArray(image,0,image.length);
@@ -66,7 +79,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ListVi
 
     public class ListViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
-        TextView tvJudul, tvSkor, tvSinopsis, tvPembaca, tvTahun;
+        TextView tvJudul, tvSkor, tvSinopsis, tvPembaca, tvTahun, tvRank;
 
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -77,6 +90,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ListVi
             tvPembaca = (TextView) itemView.findViewById(R.id.tv_item_pembaca);
             tvTahun = (TextView) itemView.findViewById(R.id.tv_item_tahun);
             tvSinopsis = (TextView) itemView.findViewById(R.id.tv_item_sinopsis);
+            tvRank = (TextView) itemView.findViewById(R.id.tv_item_rank);
         }
     }
 

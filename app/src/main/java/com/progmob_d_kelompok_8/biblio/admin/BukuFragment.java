@@ -147,7 +147,8 @@ public class BukuFragment extends Fragment {
                     , skor
                     , gambarSampul
                     , jumlahPembaca
-                    , peringkat);
+                    , peringkat
+                    , 0);
 
             listBook.add(book);
         }
@@ -165,7 +166,7 @@ public class BukuFragment extends Fragment {
 
     private void showRecyclerList() {
         rvBooks.setLayoutManager(new LinearLayoutManager(getActivity()));
-        listBookAdapter = new BookListAdapter(list);
+        listBookAdapter = new BookListAdapter(list, false, false);
         rvBooks.setAdapter(listBookAdapter);
 
         listBookAdapter.setOnItemClickCallback(data -> {
