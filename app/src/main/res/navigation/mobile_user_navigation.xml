@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_user"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.progmob_d_kelompok_8.biblio.user.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.progmob_d_kelompok_8.biblio.user.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_mylist" />
+
+    <fragment
+        android:id="@+id/navigation_mylist"
+        android:name="com.progmob_d_kelompok_8.biblio.user.MyListFragments.MyListFragment"
+        android:label="@string/title_my_list"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_profile_user"
+        android:name="com.progmob_d_kelompok_8.biblio.user.UserProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile_user" />
+</navigation>

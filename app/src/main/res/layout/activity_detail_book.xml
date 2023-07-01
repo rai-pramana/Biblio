@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminuser.DetailBookActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_gambar_sampul"
+            android:layout_width="274dp"
+            android:layout_height="246dp"
+            android:layout_marginTop="38dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/label_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/books_year"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rank" />
+
+        <TextView
+            android:id="@+id/label_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/books_rank"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rating" />
+
+        <TextView
+            android:id="@+id/label_penerbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:text="Penerbit:"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_penulis" />
+
+        <TextView
+            android:id="@+id/penulis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:text="Penulis:"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_jenis_buku" />
+
+        <TextView
+            android:id="@+id/label_jenis_buku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:text="Jenis Buku:"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_genre" />
+
+        <TextView
+            android:id="@+id/label_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:text="Genre:"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pembaca" />
+
+        <TextView
+            android:id="@+id/label_jumlah_pembaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:text="Pembaca:"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_year" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Judul"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/iv_gambar_sampul" />
+
+        <TextView
+            android:id="@+id/tv_rank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Rank"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toEndOf="@+id/label_rank"
+            app:layout_constraintTop_toTopOf="@+id/label_rank" />
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Tahun"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toEndOf="@+id/label_year"
+            app:layout_constraintTop_toTopOf="@+id/label_year" />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="8dp"
+            android:text="Rating"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_sinopsis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="38dp"
+            android:text="Sinopsis"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_penerbit"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_jenis_buku"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Jenis Buku"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toEndOf="@+id/label_jenis_buku"
+            app:layout_constraintTop_toTopOf="@+id/label_jenis_buku" />
+
+        <TextView
+            android:id="@+id/tv_genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Genre"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toEndOf="@+id/label_genre"
+            app:layout_constraintTop_toTopOf="@+id/label_genre" />
+
+        <TextView
+            android:id="@+id/tv_penulis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Penulis"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toEndOf="@+id/penulis"
+            app:layout_constraintTop_toTopOf="@+id/penulis" />
+
+        <TextView
+            android:id="@+id/tv_penerbit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Penerbit"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toEndOf="@+id/label_penerbit"
+            app:layout_constraintTop_toTopOf="@+id/label_penerbit" />
+
+        <TextView
+            android:id="@+id/tv_pembaca"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Pembaca"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toEndOf="@+id/label_jumlah_pembaca"
+            app:layout_constraintTop_toTopOf="@+id/label_jumlah_pembaca" />
+
+        <ImageButton
+            android:id="@+id/bt_edit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/baseline_edit_note_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sinopsis" />
+
+        <ImageButton
+            android:id="@+id/bt_delete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_delete_24"
+            app:layout_constraintBottom_toBottomOf="@+id/bt_edit"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/bt_edit"
+            app:layout_constraintTop_toTopOf="@+id/bt_edit"
+            app:layout_constraintVertical_bias="0.708" />
+
+        <ImageButton
+            android:id="@+id/bt_list_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sinopsis"
+            app:srcCompat="@drawable/baseline_playlist_add_24" />
+
+        <ImageButton
+            android:id="@+id/bt_list_update"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_gambar_sampul"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sinopsis"
+            app:srcCompat="@drawable/baseline_edit_note_24_green"
+            android:backgroundTint="@color/succes"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/iv_gambar_sampul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:srcCompat="@drawable/baseline_star_rate_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminuser.UserUpdateActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/choose_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/baseline_account_box_24" />
+
+        <EditText
+            android:id="@+id/etNamaEdit"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_nama"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivEdit" />
+
+        <EditText
+            android:id="@+id/etEmailEdit"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_email"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNamaEdit" />
+
+        <EditText
+            android:id="@+id/etNoHPEdit"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_no_hp"
+            android:inputType="phone"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEmailEdit" />
+
+        <EditText
+            android:id="@+id/etJenisKelaminEdit"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_jenis_kelamin"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNoHPEdit" />
+
+        <EditText
+            android:id="@+id/etAlamatEdit"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_alamat"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etJenisKelaminEdit" />
+
+        <EditText
+            android:id="@+id/etRoleEdit"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/ed_role"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etAlamatEdit" />
+
+        <EditText
+            android:id="@+id/etPasswordEdit"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/ed_password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etRoleEdit" />
+
+        <Button
+            android:id="@+id/btUpdateUserEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/bt_update"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordEdit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

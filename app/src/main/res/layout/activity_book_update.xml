@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.BookUpdateActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/choose_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/baseline_add_photo_alternate_24" />
+
+        <EditText
+            android:id="@+id/etjudulEdit"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_judul"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivEdit" />
+
+        <EditText
+            android:id="@+id/etPenulisEdit"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_penulis"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etjudulEdit" />
+
+        <EditText
+            android:id="@+id/etPenerbitEdit"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_penerbit"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPenulisEdit" />
+
+        <EditText
+            android:id="@+id/etGenreEdit"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_genre"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPenerbitEdit" />
+
+        <EditText
+            android:id="@+id/etJenisBukuEdit"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_jenis_buku"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etGenreEdit" />
+
+        <EditText
+            android:id="@+id/etTglTerbitEdit"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/ed_tanggal_terbit_yyyy_mm_dd"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etJenisBukuEdit" />
+
+        <EditText
+            android:id="@+id/etSinopsisEdit"
+            android:layout_width="0dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/ed_sinopsis"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="@+id/etTglTerbitEdit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etTglTerbitEdit"
+            app:layout_constraintTop_toBottomOf="@+id/etTglTerbitEdit" />
+
+        <Button
+            android:id="@+id/updateBukuEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/bt_update"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSinopsisEdit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

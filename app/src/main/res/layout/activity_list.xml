@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.ListActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Judul"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.105"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/label_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/label_status"
+            app:layout_constraintStart_toStartOf="@+id/tv_judul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_judul" />
+
+        <ToggleButton
+            android:id="@+id/tb_favorite"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="58dp"
+            android:background="@drawable/toggle_selector"
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/label_status" />
+
+        <RadioGroup
+            android:id="@+id/rb_group_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/tv_judul"
+            app:layout_constraintTop_toBottomOf="@+id/label_status">
+
+            <RadioButton
+                android:id="@+id/rb_selesai"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/status_baca_selesai" />
+
+            <RadioButton
+                android:id="@+id/rb_rencana_dibaca"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:checked="true"
+                android:text="@string/status_baca_rencana_dibaca" />
+
+            <RadioButton
+                android:id="@+id/rb_sedang_dibaca"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/status_baca_sedang_dibaca" />
+
+            <RadioButton
+                android:id="@+id/rb_dijatuhkan"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/status_baca_dijatuhkan" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/label_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/label_skor"
+            app:layout_constraintStart_toStartOf="@+id/tv_judul"
+            app:layout_constraintTop_toBottomOf="@+id/rb_group_status" />
+
+        <RadioGroup
+            android:id="@+id/rb_group_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/label_score"
+            app:layout_constraintTop_toBottomOf="@+id/label_score">
+
+            <RadioButton
+                android:id="@+id/rb_null"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:checked="true"
+                android:text="@string/skor_null" />
+
+            <RadioButton
+                android:id="@+id/rb_10"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/skor_10" />
+
+            <RadioButton
+                android:id="@+id/rb_9"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/skor_9" />
+
+            <RadioButton
+                android:id="@+id/rb_8"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/skor_8" />
+
+            <RadioButton
+                android:id="@+id/rb_7"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/skor_7" />
+
+            <RadioButton
+                android:id="@+id/rb_6"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/skor_6" />
+
+            <RadioButton
+                android:id="@+id/rb_5"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/skor_5" />
+
+            <RadioButton
+                android:id="@+id/rb_4"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/skor_4" />
+
+            <RadioButton
+                android:id="@+id/rb_3"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/skor_3" />
+
+            <RadioButton
+                android:id="@+id/rb_2"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/skor_2" />
+
+            <RadioButton
+                android:id="@+id/rb_1"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/skor_1" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/label_review"
+            app:layout_constraintStart_toStartOf="@+id/tv_judul"
+            app:layout_constraintTop_toBottomOf="@+id/rb_group_score" />
+
+        <EditText
+            android:id="@+id/et_review"
+            android:layout_width="0dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="38dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Review"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_judul"
+            app:layout_constraintTop_toBottomOf="@+id/tv_review" />
+
+        <TextView
+            android:id="@+id/label_tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/label_tanggal"
+            app:layout_constraintStart_toStartOf="@+id/tv_judul"
+            app:layout_constraintTop_toBottomOf="@+id/et_review" />
+
+        <EditText
+            android:id="@+id/et_tanggal_mulai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Tanggal Mulai: YYYY-MM-DD"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/et_review"
+            app:layout_constraintStart_toStartOf="@+id/tv_judul"
+            app:layout_constraintTop_toBottomOf="@+id/label_tanggal" />
+
+        <EditText
+            android:id="@+id/et_tanggal_selesai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Tanggal Selesai: YYYY-MM-DD"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/et_review"
+            app:layout_constraintStart_toStartOf="@+id/tv_judul"
+            app:layout_constraintTop_toBottomOf="@+id/et_tanggal_mulai" />
+
+        <Button
+            android:id="@+id/bt_save_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/simpan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_tanggal_selesai"
+            app:layout_constraintVertical_bias="0.032" />
+
+        <Button
+            android:id="@+id/bt_delete_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/hapus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_save_list" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

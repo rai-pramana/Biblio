@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.DetailUserActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_foto"
+            android:layout_width="274dp"
+            android:layout_height="246dp"
+            android:layout_marginTop="32dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/label_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_email"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_role" />
+
+        <TextView
+            android:id="@+id/label_no_hp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_no_hp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+        <TextView
+            android:id="@+id/label_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_gender"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_no_hp" />
+
+        <TextView
+            android:id="@+id/label_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_alamat"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gender" />
+
+        <TextView
+            android:id="@+id/label_tanggal_gabung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_tanggal_gabung"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_alamat" />
+
+        <TextView
+            android:id="@+id/label_statistik"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Statistik:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_gabung" />
+
+        <TextView
+            android:id="@+id/label_selesai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_selesai"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/label_statistik" />
+
+        <TextView
+            android:id="@+id/label_skor_mean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_skor_mean"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_selesai" />
+
+        <TextView
+            android:id="@+id/label_rencana_dibaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_rencana_dibaca"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_skor_mean" />
+
+        <TextView
+            android:id="@+id/label_sedang_dibaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_sedang_dibaca"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rencana_dibaca" />
+
+        <TextView
+            android:id="@+id/label_dijatuhkan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_dijatuhkan"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sedang_dibaca" />
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nama"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/iv_foto" />
+
+        <TextView
+            android:id="@+id/tv_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Role"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Email"
+            app:layout_constraintStart_toEndOf="@+id/label_email"
+            app:layout_constraintTop_toTopOf="@+id/label_email" />
+
+        <TextView
+            android:id="@+id/tv_no_hp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="No HP"
+            app:layout_constraintStart_toEndOf="@+id/label_no_hp"
+            app:layout_constraintTop_toTopOf="@+id/label_no_hp" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Gender"
+            app:layout_constraintStart_toEndOf="@+id/label_gender"
+            app:layout_constraintTop_toTopOf="@+id/label_gender" />
+
+        <TextView
+            android:id="@+id/tv_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Alamat"
+            app:layout_constraintStart_toEndOf="@+id/label_alamat"
+            app:layout_constraintTop_toTopOf="@+id/label_alamat" />
+
+        <TextView
+            android:id="@+id/tv_tanggal_gabung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Tanggal Gabung"
+            app:layout_constraintStart_toEndOf="@+id/label_tanggal_gabung"
+            app:layout_constraintTop_toTopOf="@+id/label_tanggal_gabung" />
+
+        <TextView
+            android:id="@+id/tv_selesai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Selesai"
+            app:layout_constraintStart_toEndOf="@+id/label_selesai"
+            app:layout_constraintTop_toTopOf="@+id/label_selesai" />
+
+        <TextView
+            android:id="@+id/tv_skor_mean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Skor Mean"
+            app:layout_constraintStart_toEndOf="@+id/label_skor_mean"
+            app:layout_constraintTop_toTopOf="@+id/label_skor_mean" />
+
+        <TextView
+            android:id="@+id/tv_rencana_dibaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Rencana Dibaca"
+            app:layout_constraintStart_toEndOf="@+id/label_rencana_dibaca"
+            app:layout_constraintTop_toTopOf="@+id/label_rencana_dibaca" />
+
+        <TextView
+            android:id="@+id/tv_sedang_dibaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Sedang Dibaca"
+            app:layout_constraintStart_toEndOf="@+id/label_sedang_dibaca"
+            app:layout_constraintTop_toTopOf="@+id/label_sedang_dibaca" />
+
+        <TextView
+            android:id="@+id/tv_dijatuhkan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Dijatuhkan"
+            app:layout_constraintStart_toEndOf="@+id/label_dijatuhkan"
+            app:layout_constraintTop_toTopOf="@+id/label_dijatuhkan" />
+
+        <ImageButton
+            android:id="@+id/bt_edit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/baseline_edit_note_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dijatuhkan" />
+
+        <ImageButton
+            android:id="@+id/bt_delete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_delete_24"
+            app:layout_constraintBottom_toBottomOf="@+id/bt_edit"
+            app:layout_constraintEnd_toEndOf="@+id/iv_foto"
+            app:layout_constraintTop_toTopOf="@+id/bt_edit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

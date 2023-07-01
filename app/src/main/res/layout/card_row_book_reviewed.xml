@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    card_view:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_gambar_sampul"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:scaleType="centerCrop"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.04"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/iv_gambar_sampul"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/iv_gambar_sampul"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/books_title" />
+
+
+        <TextView
+            android:id="@+id/tv_item_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/iv_gambar_sampul"
+            android:textSize="10sp"
+            card_view:layout_constraintEnd_toStartOf="@+id/label_rating"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            tools:text="8" />
+
+        <ImageView
+            android:id="@+id/iv_rating"
+            android:layout_width="13dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="2dp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tv_item_rating"
+            card_view:layout_constraintEnd_toStartOf="@+id/tv_item_rating"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            card_view:srcCompat="@drawable/baseline_star_rate_24" />
+
+        <TextView
+            android:id="@+id/label_rating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="10sp"
+            card_view:layout_constraintEnd_toStartOf="@+id/iv_tahun"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            tools:text="/10" />
+
+        <ImageView
+            android:id="@+id/iv_tahun"
+            android:layout_width="13dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="2dp"
+            card_view:layout_constraintEnd_toStartOf="@+id/tv_item_tahun"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            card_view:srcCompat="@drawable/baseline_update_24" />
+
+        <TextView
+            android:id="@+id/tv_item_tahun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="10sp"
+            card_view:layout_constraintEnd_toEndOf="@+id/tv_item_title"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            tools:text="YYYY" />
+
+        <TextView
+            android:id="@+id/label_tanggal_mulai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="10sp"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_item_title"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            tools:text="Tanggal Mulai:" />
+
+        <TextView
+            android:id="@+id/label_tanggal_selesai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="10sp"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_item_title"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_tanggal_mulai"
+            tools:text="Tanggal Selesai:" />
+
+        <TextView
+            android:id="@+id/tv_item_tanggal_mulai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="10sp"
+            card_view:layout_constraintStart_toEndOf="@+id/label_tanggal_mulai"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            tools:text="YYYY-MM-DD" />
+
+        <TextView
+            android:id="@+id/tv_item_tanggal_selesai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="10sp"
+            card_view:layout_constraintStart_toEndOf="@+id/label_tanggal_selesai"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_tanggal_mulai"
+            tools:text="YYYY-MM-DD" />
+
+        <TextView
+            android:id="@+id/tv_item_review"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="10sp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/iv_gambar_sampul"
+            card_view:layout_constraintEnd_toEndOf="@+id/tv_item_title"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_item_title"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_tanggal_selesai"
+            tools:text="Lorem sdfffffffffffffffff sdfsssfghfg fghfgh fghfgh fghfgh fghfgh fghs sdfffffffff sdf sdffffffffffffff sdfs sdffffffff sdfffffffffff sdfffffffffffffffffffffffffffffffffffffffffff sdffffffffffffffff sdfffffffffffffffffffff sdfffffffffffffffffff dsfffffffffffffffffffff sdffffffffffffffffffffffff sdfffffffffffffffffffff sdffffffffffffffffffffff sdffffffffffffffffffff sdffffffffffffffffffffffffffffffff sdfffffffffffffff sdfffffffffffffffff sdffff asdddddddddddddddddddd asdddddddddd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

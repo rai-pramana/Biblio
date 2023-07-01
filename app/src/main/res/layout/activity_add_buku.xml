@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AddBukuActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/chooseImageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/choose_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/baseline_add_photo_alternate_24" />
+
+        <EditText
+            android:id="@+id/etJudul"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_judul"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chooseImageView" />
+
+        <EditText
+            android:id="@+id/etPenulis"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_penulis"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etJudul" />
+
+        <EditText
+            android:id="@+id/etPenerbit"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_penerbit"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPenulis" />
+
+        <EditText
+            android:id="@+id/etGenre"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_genre"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPenerbit" />
+
+        <EditText
+            android:id="@+id/etJenisBuku"
+            android:layout_width="347dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ed_jenis_buku"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etGenre" />
+
+        <EditText
+            android:id="@+id/etTglTerbit"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/ed_tanggal_terbit_yyyy_mm_dd"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etJenisBuku" />
+
+        <EditText
+            android:id="@+id/etSinopsis"
+            android:layout_width="0dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/ed_sinopsis"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="@+id/etTglTerbit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etTglTerbit"
+            app:layout_constraintTop_toBottomOf="@+id/etTglTerbit" />
+
+        <Button
+            android:id="@+id/btAddBuku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/bt_tambah"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSinopsis" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
