@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -33,9 +36,12 @@ public class UserUpdateActivity extends AppCompatActivity {
 
     final int REQUEST_CODE_GALLERY = 999;
     private int idUser;
-    EditText etNama, etEmail, etNoHP, etJenisKelamin, etAlamat, etRole, etPassword;
+    EditText etNama, etEmail, etNoHP, etAlamat, etPassword;
     Button btUpdateUser;
     ImageView chooseImageView;
+    RadioGroup rgJenisKelamin, rgRole;
+    RadioButton rbJenisKelamin, rbRole, rbJKPria, rbJKWanita, rbRolePengguna, rbRoleAdmin;
+    TextView tvRole;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,14 +57,22 @@ public class UserUpdateActivity extends AppCompatActivity {
         etNama = findViewById(R.id.etNamaEdit);
         etEmail = findViewById(R.id.etEmailEdit);
         etNoHP = findViewById(R.id.etNoHPEdit);
-        etJenisKelamin = findViewById(R.id.etJenisKelaminEdit);
+        rgJenisKelamin = findViewById(R.id.rgJenisKelamin);
         etAlamat = findViewById(R.id.etAlamatEdit);
-        etRole = findViewById(R.id.etRoleEdit);
+        rgRole = findViewById(R.id.rgRole);
         etPassword = findViewById(R.id.etPasswordEdit);
         btUpdateUser = findViewById(R.id.btUpdateUserEdit);
         chooseImageView = findViewById(R.id.ivEdit);
+        tvRole = findViewById(R.id.tvRole);
+        rbJKPria = findViewById(R.id.rbJKPria);
+        rbJKWanita = findViewById(R.id.rbJKWanita);
+        rbRolePengguna = findViewById(R.id.rbRolePengguna);
+        rbRoleAdmin = findViewById(R.id.rbRoleAdmin);
 
-        if (session.isFromUserProfileFragment()) etRole.setVisibility(View.GONE);
+        if (session.isFromUserProfileFragment()) {
+            tvRole.setVisibility(View.GONE);
+            rgRole.setVisibility(View.GONE);
+        }
 
         setView();
 
@@ -75,10 +89,14 @@ public class UserUpdateActivity extends AppCompatActivity {
                 String nama = etNama.getText().toString();
                 String email = etEmail.getText().toString();
                 String noHP = etNoHP.getText().toString();
-                String jenisKelamin = etJenisKelamin.getText().toString();
                 String alamat = etAlamat.getText().toString();
-                String role = etRole.getText().toString();
                 String password = etPassword.getText().toString();
+
+                rbJenisKelamin = findViewById(rgJenisKelamin.getCheckedRadioButtonId());
+                String jenisKelamin = rbJenisKelamin.getText().toString();
+
+                rbRole = findViewById(rgRole.getCheckedRadioButtonId());
+                String role = rbRole.getText().toString();
 
                 if(nama.isEmpty()
                         || email.isEmpty()
@@ -142,9 +160,15 @@ public class UserUpdateActivity extends AppCompatActivity {
         etNama.setText(nama);
         etEmail.setText(email);
         etNoHP.setText(no_hp);
-        etJenisKelamin.setText(jenis_kelamin);
+
+        if (jenis_kelamin.equals("Pria")) rbJKPria.setChecked(true);
+        else rbJKWanita.setChecked(true);
+
         etAlamat.setText(alamat);
-        etRole.setText(role);
+
+        if (role.equals("Pengguna")) rbRolePengguna.setChecked(true);
+        else rbRoleAdmin.setChecked(true);
+
         etPassword.setText(password_pengguna);
         chooseImageView.setImageBitmap(bitmap);
     }

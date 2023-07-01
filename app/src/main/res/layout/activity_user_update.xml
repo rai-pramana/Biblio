@@ -58,17 +58,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etEmailEdit" />
 
-        <EditText
-            android:id="@+id/etJenisKelaminEdit"
-            android:layout_width="347dp"
-            android:layout_height="45dp"
+        <TextView
+            android:id="@+id/tvJenisKelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="@string/ed_jenis_kelamin"
-            android:inputType="text"
-            android:singleLine="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="Jenis Kelamin"
+            app:layout_constraintStart_toStartOf="@+id/etNoHPEdit"
             app:layout_constraintTop_toBottomOf="@+id/etNoHPEdit" />
+
+        <RadioGroup
+            android:id="@+id/rgJenisKelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/tvJenisKelamin"
+            app:layout_constraintTop_toBottomOf="@+id/tvJenisKelamin">
+
+            <RadioButton
+                android:id="@+id/rbJKPria"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:checked="true"
+                android:text="Pria" />
+
+            <RadioButton
+                android:id="@+id/rbJKWanita"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="Wanita" />
+        </RadioGroup>
 
         <EditText
             android:id="@+id/etAlamatEdit"
@@ -80,19 +98,37 @@
             android:singleLine="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etJenisKelaminEdit" />
+            app:layout_constraintTop_toBottomOf="@+id/rgJenisKelamin" />
 
-        <EditText
-            android:id="@+id/etRoleEdit"
-            android:layout_width="347dp"
+        <TextView
+            android:id="@+id/tvRole"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="@string/ed_role"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="Role"
+            app:layout_constraintStart_toStartOf="@+id/etAlamatEdit"
             app:layout_constraintTop_toBottomOf="@+id/etAlamatEdit" />
+
+        <RadioGroup
+            android:id="@+id/rgRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/tvRole"
+            app:layout_constraintTop_toBottomOf="@+id/tvRole">
+
+            <RadioButton
+                android:id="@+id/rbRolePengguna"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:checked="true"
+                android:text="Pengguna" />
+
+            <RadioButton
+                android:id="@+id/rbRoleAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="Admin" />
+        </RadioGroup>
 
         <EditText
             android:id="@+id/etPasswordEdit"
@@ -104,7 +140,7 @@
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etRoleEdit" />
+            app:layout_constraintTop_toBottomOf="@+id/rgRole" />
 
         <Button
             android:id="@+id/btUpdateUserEdit"
