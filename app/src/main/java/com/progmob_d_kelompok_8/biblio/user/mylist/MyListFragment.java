@@ -1,4 +1,4 @@
-package com.progmob_d_kelompok_8.biblio.user.MyListFragments;
+package com.progmob_d_kelompok_8.biblio.user.mylist;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

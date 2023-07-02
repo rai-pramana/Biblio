@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_mylist"
-        android:name="com.progmob_d_kelompok_8.biblio.user.MyListFragments.MyListFragment"
+        android:name="com.progmob_d_kelompok_8.biblio.user.mylist.MyListFragment"
         android:label="@string/title_my_list"
         tools:layout="@layout/fragment_search" />
 

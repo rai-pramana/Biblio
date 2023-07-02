@@ -1,4 +1,4 @@
-package com.progmob_d_kelompok_8.biblio.user.MyListFragments;
+package com.progmob_d_kelompok_8.biblio.user.mylist;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -22,7 +22,7 @@ import com.progmob_d_kelompok_8.biblio.tool.Session;
 
 import java.util.ArrayList;
 
-public class DijatuhkanFragment extends Fragment {
+public class SedangDibacaFragment extends Fragment {
 
     private DatabaseHelper db;
     private Session session;
@@ -39,7 +39,7 @@ public class DijatuhkanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dijatuhkan, container, false);
+        return inflater.inflate(R.layout.fragment_sedang_dibaca, container, false);
     }
 
     @Override
@@ -74,7 +74,7 @@ public class DijatuhkanFragment extends Fragment {
     }
 
     public ArrayList<ReviewedBook> getListReviewedBooks() {
-        Cursor cursor = db.getReviewedBookData(session.getUserId(), "Dijatuhkan");
+        Cursor cursor = db.getReviewedBookData(session.getUserId(), "Sedang Dibaca");
 
         ArrayList<ReviewedBook> listReviewedBook = new ArrayList<>();
         while (cursor.moveToNext()){
