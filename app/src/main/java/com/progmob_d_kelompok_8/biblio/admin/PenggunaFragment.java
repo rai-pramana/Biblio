@@ -60,6 +60,8 @@ public class PenggunaFragment extends Fragment {
 
         searchView =  view.findViewById(R.id.searchViewUser);
         searchView.clearFocus();
+        searchView.setQueryHint("Cari Pengguna...");
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

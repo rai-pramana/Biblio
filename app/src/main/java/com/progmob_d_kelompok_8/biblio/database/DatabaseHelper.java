@@ -849,7 +849,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public Cursor getAllBookDataRank(){
-        String selectQuery = "select id_buku, id_pengguna, nama_jenis_buku, nama_genre, nama_penulis, nama_penerbit, judul_buku, strftime('%Y', tgl_terbit), sinopsis, skor, gambar_sampul, jumlah_pembaca, peringkat from tb_buku order by peringkat asc, jumlah_pembaca desc";
+        String selectQuery = "select id_buku, id_pengguna, nama_jenis_buku, nama_genre, nama_penulis, nama_penerbit, judul_buku, strftime('%Y', tgl_terbit), sinopsis, skor, gambar_sampul, jumlah_pembaca, peringkat from tb_buku where peringkat != 0 order by peringkat asc, jumlah_pembaca desc";
 
         SQLiteDatabase db = this.getReadableDatabase();
 

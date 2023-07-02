@@ -7,7 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,7 +25,7 @@ public class DetailBookActivity extends AppCompatActivity {
     private DatabaseHelper db;
     private Session session;
 
-    ImageButton btEdit, btDelete, btListAdd, btListUpdate;
+    Button btEdit, btDelete, btListAdd, btListUpdate;
     TextView tvTitle
             , tvRank
             , tvYear
@@ -182,6 +182,8 @@ public class DetailBookActivity extends AppCompatActivity {
         tvPembaca.setText(String.valueOf(jumlahPembaca));
         ivImg.setImageBitmap(bitmap);
         tvRank.setText(String.valueOf(rank));
+
+        setTitle(judulBuku);
     }
 
     private void showDialogDelete(){

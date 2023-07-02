@@ -32,6 +32,8 @@ public class ReviewActivity extends AppCompatActivity {
         session = new Session(ReviewActivity.this);
         db = new DatabaseHelper(ReviewActivity.this);
 
+        setTitle("Review Buku " + session.getBookTitle());
+
         rvReview = findViewById(R.id.recyclerViewReview);
         rvReview.setHasFixedSize(true);
 

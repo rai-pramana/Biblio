@@ -1,44 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
+    style="?attr/materialCardViewElevatedStyle"
+    android:clickable="true"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="120dp"
     android:layout_gravity="center"
     android:layout_marginStart="8dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginBottom="4dp"
-    card_view:cardCornerRadius="8dp">
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tv_item_rank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="?attr/colorPrimary"
             android:textSize="28sp"
             android:textStyle="bold"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
             tools:text="1"
             tools:visibility="gone" />
 
         <ImageView
             android:id="@+id/iv_gambar_sampul"
-            android:layout_width="70dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
             card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintStart_toEndOf="@+id/tv_item_rank"
+            card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.04"
             tools:src="@tools:sample/avatars" />
 
         <TextView
@@ -46,11 +45,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_toEndOf="@id/iv_gambar_sampul"
             android:textSize="16sp"
             android:textStyle="bold"
-            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@+id/tv_item_rank"
             card_view:layout_constraintStart_toEndOf="@+id/iv_gambar_sampul"
             card_view:layout_constraintTop_toTopOf="parent"
             tools:text="@string/books_title" />
@@ -125,12 +125,14 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             android:ellipsize="end"
             android:maxLines="5"
             android:textSize="12sp"
             android:textStyle="bold"
             card_view:layout_constraintBottom_toBottomOf="@+id/iv_gambar_sampul"
-            card_view:layout_constraintEnd_toEndOf="@+id/tv_item_title"
+            card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintStart_toStartOf="@+id/iv_rating"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_item_pembaca"
@@ -138,4 +140,4 @@
             tools:text="@string/synopsis" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

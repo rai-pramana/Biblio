@@ -12,24 +12,41 @@
 
         <ImageView
             android:id="@+id/iv_foto"
-            android:layout_width="274dp"
+            android:layout_width="0dp"
             android:layout_height="246dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/materialDivider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:dividerInsetEnd="16dp"
+            app:dividerInsetStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/materialDivider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:dividerInsetEnd="16dp"
+            app:dividerInsetStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_gabung" />
 
         <TextView
             android:id="@+id/label_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/user_email"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/tv_role"
             app:layout_constraintTop_toBottomOf="@+id/tv_role" />
 
         <TextView
@@ -39,7 +56,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_no_hp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_email"
             app:layout_constraintTop_toBottomOf="@+id/tv_email" />
 
         <TextView
@@ -49,7 +66,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_gender"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_no_hp"
             app:layout_constraintTop_toBottomOf="@+id/tv_no_hp" />
 
         <TextView
@@ -59,7 +76,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_alamat"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_gender"
             app:layout_constraintTop_toBottomOf="@+id/tv_gender" />
 
         <TextView
@@ -69,19 +86,19 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_tanggal_gabung"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_alamat"
             app:layout_constraintTop_toBottomOf="@+id/tv_alamat" />
 
         <TextView
             android:id="@+id/label_statistik"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:text="Statistik:"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
-            app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_gabung" />
+            app:layout_constraintStart_toStartOf="@+id/label_tanggal_gabung"
+            app:layout_constraintTop_toBottomOf="@+id/materialDivider2" />
 
         <TextView
             android:id="@+id/label_selesai"
@@ -90,7 +107,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_selesai"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_statistik"
             app:layout_constraintTop_toBottomOf="@+id/label_statistik" />
 
         <TextView
@@ -100,7 +117,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_skor_mean"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_selesai"
             app:layout_constraintTop_toBottomOf="@+id/tv_selesai" />
 
         <TextView
@@ -110,7 +127,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_rencana_dibaca"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_skor_mean"
             app:layout_constraintTop_toBottomOf="@+id/tv_skor_mean" />
 
         <TextView
@@ -120,7 +137,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_sedang_dibaca"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_rencana_dibaca"
             app:layout_constraintTop_toBottomOf="@+id/tv_rencana_dibaca" />
 
         <TextView
@@ -130,14 +147,16 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_dijatuhkan"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_sedang_dibaca"
             app:layout_constraintTop_toBottomOf="@+id/tv_sedang_dibaca" />
 
         <TextView
             android:id="@+id/tv_nama"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="38dp"
             android:text="Nama"
             android:textAlignment="center"
             android:textSize="28sp"
@@ -150,11 +169,11 @@
             android:id="@+id/tv_role"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="Role"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
+            app:layout_constraintStart_toStartOf="@+id/tv_nama"
+            app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
 
         <TextView
             android:id="@+id/tv_email"
@@ -250,24 +269,28 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_sedang_dibaca"
             app:layout_constraintVertical_bias="0.0" />
 
-        <ImageButton
+        <Button
             android:id="@+id/bt_edit"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="32dp"
-            android:src="@drawable/baseline_edit_note_24"
+            android:text="@string/edit"
+            android:icon="@drawable/baseline_edit_note_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintEnd_toEndOf="@+id/tv_nama"
             app:layout_constraintTop_toBottomOf="@+id/tv_dijatuhkan" />
 
-        <ImageButton
+        <Button
             android:id="@+id/bt_delete"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/baseline_delete_24"
-            app:layout_constraintBottom_toBottomOf="@+id/bt_edit"
-            app:layout_constraintEnd_toEndOf="@+id/iv_foto"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/hapus"
+            android:icon="@drawable/baseline_delete_24"
+            app:layout_constraintEnd_toStartOf="@+id/bt_edit"
             app:layout_constraintTop_toTopOf="@+id/bt_edit" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

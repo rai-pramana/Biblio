@@ -144,7 +144,12 @@ public class UserUpdateActivity extends AppCompatActivity {
         String no_hp = cursor.getString(5);
         String jenis_kelamin = cursor.getString(6);
         String alamat = cursor.getString(7);
-        byte[] foto = cursor.getBlob(8);
+
+        if (cursor.getBlob(8) != null){
+            byte[] foto = cursor.getBlob(8);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(foto,0, foto.length);
+            chooseImageView.setImageBitmap(bitmap);
+        }
 //        String tgl_gabung = cursor.getString(9);
 //        int selesai = cursor.getInt(10);
 //        int rencana_dibaca = cursor.getInt(11);
@@ -154,8 +159,6 @@ public class UserUpdateActivity extends AppCompatActivity {
 
         cursor.close();
         db.close();
-
-        Bitmap bitmap = BitmapFactory.decodeByteArray(foto,0, foto.length);
 
         etNama.setText(nama);
         etEmail.setText(email);
@@ -170,7 +173,8 @@ public class UserUpdateActivity extends AppCompatActivity {
         else rbRoleAdmin.setChecked(true);
 
         etPassword.setText(password_pengguna);
-        chooseImageView.setImageBitmap(bitmap);
+
+        setTitle("Update Akun " + nama);
     }
 
     @Override

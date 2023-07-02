@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,7 +26,7 @@ public class AdminProfileFragment extends Fragment {
     private DatabaseHelper db;
     private Session session;
 
-    ImageButton btEdit, btLogout;
+    Button btEdit, btLogout;
     TextView tvNama
             , tvRole
             , tvEmail

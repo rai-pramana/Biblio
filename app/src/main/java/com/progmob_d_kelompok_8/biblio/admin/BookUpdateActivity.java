@@ -135,6 +135,8 @@ public class BookUpdateActivity extends AppCompatActivity {
         etPenulis.setText(namaPenulis);
         etPenerbit.setText(namaPenerbit);
         chooseImageView.setImageBitmap(bitmap);
+
+        setTitle("Update Buku " + judulBuku);
     }
 
     @Override

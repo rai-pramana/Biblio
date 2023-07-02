@@ -12,101 +12,164 @@
 
         <ImageView
             android:id="@+id/chooseImageView"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:contentDescription="@string/choose_image"
+            android:scaleType="fitCenter"
+            android:src="@drawable/baseline_add_photo_alternate_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/baseline_add_photo_alternate_24" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/etJudul"
-            android:layout_width="347dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="16dp"
-            android:hint="@string/ed_judul"
-            android:inputType="text"
-            android:singleLine="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chooseImageView" />
-
-        <EditText
-            android:id="@+id/etPenulis"
-            android:layout_width="347dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="16dp"
-            android:hint="@string/ed_penulis"
-            android:inputType="text"
-            android:singleLine="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etJudul" />
-
-        <EditText
-            android:id="@+id/etPenerbit"
-            android:layout_width="347dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="16dp"
-            android:hint="@string/ed_penerbit"
-            android:inputType="text"
-            android:singleLine="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etPenulis" />
-
-        <EditText
-            android:id="@+id/etGenre"
-            android:layout_width="347dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="16dp"
-            android:hint="@string/ed_genre"
-            android:inputType="text"
-            android:singleLine="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etPenerbit" />
-
-        <EditText
-            android:id="@+id/etJenisBuku"
-            android:layout_width="347dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="16dp"
-            android:hint="@string/ed_jenis_buku"
-            android:inputType="text"
-            android:singleLine="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etGenre" />
-
-        <EditText
-            android:id="@+id/etTglTerbit"
-            android:layout_width="347dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldJudul"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="@string/ed_tanggal_terbit_yyyy_mm_dd"
-            android:inputType="text"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/ed_judul"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etJenisBuku" />
+            app:layout_constraintTop_toBottomOf="@+id/chooseImageView">
 
-        <EditText
-            android:id="@+id/etSinopsis"
-            android:layout_width="0dp"
-            android:layout_height="123dp"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldPenulis"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
-            android:ems="10"
-            android:gravity="start|top"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/ed_penulis"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldJudul">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPenulis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldPenerbit"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/ed_penerbit"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldPenulis">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPenerbit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldGenre"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/ed_genre"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldPenerbit">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldJenisBuku"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/ed_jenis_buku"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldGenre">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etJenisBuku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldTglTerbit"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/ed_tanggal_terbit"
+            app:endIconMode="clear_text"
+            app:helperText="@string/ed_tanggal_yyyy_mm_dd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldJenisBuku">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTglTerbit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldSinopsis"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:hint="@string/ed_sinopsis"
-            android:inputType="textMultiLine"
-            app:layout_constraintEnd_toEndOf="@+id/etTglTerbit"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/etTglTerbit"
-            app:layout_constraintTop_toBottomOf="@+id/etTglTerbit" />
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldTglTerbit">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSinopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btAddBuku"
@@ -115,10 +178,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="32dp"
             android:text="@string/bt_tambah"
+            app:icon="@drawable/ic_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etSinopsis" />
+            app:layout_constraintTop_toBottomOf="@+id/textFieldSinopsis" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

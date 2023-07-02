@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -57,6 +56,8 @@ public class SearchFragment extends Fragment {
 
         searchView =  view.findViewById(R.id.searchViewBook);
         searchView.clearFocus();
+        searchView.setQueryHint("Cari Buku...");
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -90,7 +91,6 @@ public class SearchFragment extends Fragment {
 
         if (filteredList.isEmpty()){
             listBookAdapter.setFilteredList(filteredList);
-            Toast.makeText(getActivity(), "Buku tidak ditemukan", Toast.LENGTH_SHORT).show();
         } else {
             listBookAdapter.setFilteredList(filteredList);
         }

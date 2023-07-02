@@ -12,9 +12,9 @@
 
         <ImageView
             android:id="@+id/ivEdit"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:contentDescription="@string/choose_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -22,50 +22,78 @@
             app:layout_constraintTop_toTopOf="parent"
             android:src="@drawable/baseline_account_box_24" />
 
-        <EditText
-            android:id="@+id/etNamaEdit"
-            android:layout_width="347dp"
-            android:layout_height="45dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldNama"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:hint="@string/ed_nama"
-            android:inputType="text"
-            android:singleLine="true"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivEdit" />
+            app:layout_constraintTop_toBottomOf="@+id/ivEdit">
 
-        <EditText
-            android:id="@+id/etEmailEdit"
-            android:layout_width="347dp"
-            android:layout_height="45dp"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNamaEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:hint="@string/ed_email"
-            android:inputType="textEmailAddress"
-            android:singleLine="true"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etNamaEdit" />
+            app:layout_constraintTop_toBottomOf="@+id/textFieldNama">
 
-        <EditText
-            android:id="@+id/etNoHPEdit"
-            android:layout_width="347dp"
-            android:layout_height="45dp"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmailEdit"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldNoHP"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:hint="@string/ed_no_hp"
-            android:inputType="phone"
-            android:singleLine="true"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etEmailEdit" />
+            app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNoHPEdit"
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <TextView
             android:id="@+id/tvJenisKelamin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Jenis Kelamin"
-            app:layout_constraintStart_toStartOf="@+id/etNoHPEdit"
-            app:layout_constraintTop_toBottomOf="@+id/etNoHPEdit" />
+            android:text="@string/jenis_kelamin"
+            android:labelFor="@+id/rgJenisKelamin"
+            app:layout_constraintStart_toStartOf="@+id/textFieldNoHP"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldNoHP" />
 
         <RadioGroup
             android:id="@+id/rgJenisKelamin"
@@ -77,37 +105,27 @@
             <RadioButton
                 android:id="@+id/rbJKPria"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="Pria" />
+                android:text="@string/pria" />
 
             <RadioButton
                 android:id="@+id/rbJKWanita"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="Wanita" />
+                android:layout_height="wrap_content"
+                android:text="@string/wanita" />
         </RadioGroup>
-
-        <EditText
-            android:id="@+id/etAlamatEdit"
-            android:layout_width="347dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="16dp"
-            android:hint="@string/ed_alamat"
-            android:inputType="text"
-            android:singleLine="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rgJenisKelamin" />
 
         <TextView
             android:id="@+id/tvRole"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="58dp"
             android:layout_marginTop="16dp"
-            android:text="Role"
-            app:layout_constraintStart_toStartOf="@+id/etAlamatEdit"
-            app:layout_constraintTop_toBottomOf="@+id/etAlamatEdit" />
+            android:text="@string/role"
+            android:labelFor="@+id/rgRole"
+            app:layout_constraintStart_toEndOf="@+id/tvJenisKelamin"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldNoHP" />
 
         <RadioGroup
             android:id="@+id/rgRole"
@@ -119,28 +137,57 @@
             <RadioButton
                 android:id="@+id/rbRolePengguna"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="Pengguna" />
+                android:text="@string/pengguna" />
 
             <RadioButton
                 android:id="@+id/rbRoleAdmin"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="Admin" />
+                android:layout_height="wrap_content"
+                android:text="@string/admin" />
         </RadioGroup>
 
-        <EditText
-            android:id="@+id/etPasswordEdit"
-            android:layout_width="347dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldAlamat"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="@string/ed_password"
-            android:inputType="textPassword"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/ed_alamat"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rgRole" />
+            app:layout_constraintTop_toBottomOf="@+id/rgJenisKelamin">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAlamatEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/ed_password"
+            app:endIconMode="password_toggle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldAlamat">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPasswordEdit"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btUpdateUserEdit"
@@ -149,10 +196,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="32dp"
             android:text="@string/bt_update"
+            app:icon="@drawable/baseline_upload_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etPasswordEdit" />
+            app:layout_constraintTop_toBottomOf="@+id/textFieldPassword" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -58,6 +58,8 @@ public class BukuFragment extends Fragment {
 
         searchView =  view.findViewById(R.id.searchViewBook);
         searchView.clearFocus();
+        searchView.setQueryHint("Cari Buku...");
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -99,7 +101,6 @@ public class BukuFragment extends Fragment {
 
         if (filteredList.isEmpty()){
             listBookAdapter.setFilteredList(filteredList);
-            Toast.makeText(getActivity(), "Buku tidak ditemukan", Toast.LENGTH_SHORT).show();
         } else {
             listBookAdapter.setFilteredList(filteredList);
         }

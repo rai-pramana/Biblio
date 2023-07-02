@@ -8,40 +8,41 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/tv_judul"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
             android:text="Judul"
-            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.105"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/materialDivider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:dividerInsetEnd="16dp"
+            app:dividerInsetStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_judul" />
 
         <TextView
             android:id="@+id/label_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:labelFor="@+id/rb_group_status"
             android:text="@string/label_status"
             app:layout_constraintStart_toStartOf="@+id/tv_judul"
-            app:layout_constraintTop_toBottomOf="@+id/tv_judul" />
-
-        <ToggleButton
-            android:id="@+id/tb_favorite"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="58dp"
-            android:background="@drawable/toggle_selector"
-            android:textOff=""
-            android:textOn=""
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/label_status" />
+            app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
 
         <RadioGroup
             android:id="@+id/rb_group_status"
@@ -53,26 +54,26 @@
             <RadioButton
                 android:id="@+id/rb_selesai"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="wrap_content"
                 android:text="@string/status_baca_selesai" />
 
             <RadioButton
                 android:id="@+id/rb_rencana_dibaca"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="wrap_content"
                 android:checked="true"
                 android:text="@string/status_baca_rencana_dibaca" />
 
             <RadioButton
                 android:id="@+id/rb_sedang_dibaca"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="wrap_content"
                 android:text="@string/status_baca_sedang_dibaca" />
 
             <RadioButton
                 android:id="@+id/rb_dijatuhkan"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="wrap_content"
                 android:text="@string/status_baca_dijatuhkan" />
         </RadioGroup>
 
@@ -81,140 +82,174 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:labelFor="@+id/rb_group_score"
             android:text="@string/label_skor"
             app:layout_constraintStart_toStartOf="@+id/tv_judul"
             app:layout_constraintTop_toBottomOf="@+id/rb_group_status" />
 
-        <RadioGroup
-            android:id="@+id/rb_group_score"
-            android:layout_width="wrap_content"
+        <HorizontalScrollView
+            android:id="@+id/horizontal_score"
+            android:layout_width="328dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/label_score"
             app:layout_constraintTop_toBottomOf="@+id/label_score">
 
-            <RadioButton
-                android:id="@+id/rb_null"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:checked="true"
-                android:text="@string/skor_null" />
+            <RadioGroup
+                android:id="@+id/rb_group_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:overScrollMode="always"
+                app:layout_constraintStart_toStartOf="@+id/label_score"
+                app:layout_constraintTop_toBottomOf="@+id/label_score">
 
-            <RadioButton
-                android:id="@+id/rb_10"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="@string/skor_10" />
+                <RadioButton
+                    android:id="@+id/rb_null"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:checked="true"
+                    android:text="@string/skor_null" />
 
-            <RadioButton
-                android:id="@+id/rb_9"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="@string/skor_9" />
+                <RadioButton
+                    android:id="@+id/rb_10"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/skor_10" />
 
-            <RadioButton
-                android:id="@+id/rb_8"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="@string/skor_8" />
+                <RadioButton
+                    android:id="@+id/rb_9"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/skor_9" />
 
-            <RadioButton
-                android:id="@+id/rb_7"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="@string/skor_7" />
+                <RadioButton
+                    android:id="@+id/rb_8"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/skor_8" />
 
-            <RadioButton
-                android:id="@+id/rb_6"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="@string/skor_6" />
+                <RadioButton
+                    android:id="@+id/rb_7"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/skor_7" />
 
-            <RadioButton
-                android:id="@+id/rb_5"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="@string/skor_5" />
+                <RadioButton
+                    android:id="@+id/rb_6"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/skor_6" />
 
-            <RadioButton
-                android:id="@+id/rb_4"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="@string/skor_4" />
+                <RadioButton
+                    android:id="@+id/rb_5"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/skor_5" />
 
-            <RadioButton
-                android:id="@+id/rb_3"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="@string/skor_3" />
+                <RadioButton
+                    android:id="@+id/rb_4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/skor_4" />
 
-            <RadioButton
-                android:id="@+id/rb_2"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="@string/skor_2" />
+                <RadioButton
+                    android:id="@+id/rb_3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/skor_3" />
 
-            <RadioButton
-                android:id="@+id/rb_1"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:text="@string/skor_1" />
-        </RadioGroup>
+                <RadioButton
+                    android:id="@+id/rb_2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/skor_2" />
 
-        <TextView
-            android:id="@+id/tv_review"
-            android:layout_width="wrap_content"
+                <RadioButton
+                    android:id="@+id/rb_1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/skor_1" />
+            </RadioGroup>
+
+        </HorizontalScrollView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldReview"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="24dp"
-            android:text="@string/label_review"
-            app:layout_constraintStart_toStartOf="@+id/tv_judul"
-            app:layout_constraintTop_toBottomOf="@+id/rb_group_score" />
-
-        <EditText
-            android:id="@+id/et_review"
-            android:layout_width="0dp"
-            android:layout_height="123dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="38dp"
-            android:ems="10"
-            android:gravity="start|top"
+            android:layout_marginEnd="32dp"
             android:hint="Review"
-            android:inputType="textMultiLine"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tv_judul"
-            app:layout_constraintTop_toBottomOf="@+id/tv_review" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_score">
 
-        <TextView
-            android:id="@+id/label_tanggal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/label_tanggal"
-            app:layout_constraintStart_toStartOf="@+id/tv_judul"
-            app:layout_constraintTop_toBottomOf="@+id/et_review" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/et_tanggal_mulai"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Tanggal Mulai: YYYY-MM-DD"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="@+id/et_review"
-            app:layout_constraintStart_toStartOf="@+id/tv_judul"
-            app:layout_constraintTop_toBottomOf="@+id/label_tanggal" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/et_tanggal_selesai"
-            android:layout_width="0dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldTanggalMulai"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Tanggal Selesai: YYYY-MM-DD"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="@+id/et_review"
-            app:layout_constraintStart_toStartOf="@+id/tv_judul"
-            app:layout_constraintTop_toBottomOf="@+id/et_tanggal_mulai" />
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/tanggal_mulai"
+            app:endIconMode="clear_text"
+            app:helperText="@string/ed_tanggal_yyyy_mm_dd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldReview">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_tanggal_mulai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldTanggalSelesai"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/tanggal_selesai"
+            app:endIconMode="clear_text"
+            app:helperText="@string/ed_tanggal_yyyy_mm_dd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldTanggalMulai">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_tanggal_selesai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/bt_save_list"
@@ -223,24 +258,33 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="32dp"
             android:text="@string/simpan"
+            app:icon="@drawable/baseline_save_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_tanggal_selesai"
-            app:layout_constraintVertical_bias="0.032" />
+            app:layout_constraintStart_toStartOf="@+id/textFieldTanggalSelesai"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldTanggalSelesai" />
 
         <Button
             android:id="@+id/bt_delete_list"
+            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginStart="16dp"
             android:text="@string/hapus"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bt_save_list" />
+            app:icon="@drawable/baseline_delete_24"
+            app:layout_constraintStart_toEndOf="@+id/bt_save_list"
+            app:layout_constraintTop_toTopOf="@+id/bt_save_list" />
+
+        <ToggleButton
+            android:id="@+id/tb_favorite"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/toggle_selector"
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintBottom_toBottomOf="@+id/bt_save_list"
+            app:layout_constraintStart_toEndOf="@+id/bt_delete_list"
+            app:layout_constraintTop_toTopOf="@+id/bt_save_list" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

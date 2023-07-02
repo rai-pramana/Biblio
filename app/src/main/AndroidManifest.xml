@@ -41,32 +41,32 @@
         <activity
             android:name=".adminuser.UserUpdateActivity"
             android:exported="false"
-            android:label="Update User"
+            android:label="Update Pengguna"
             android:parentActivityName=".adminuser.DetailUserActivity" />
         <activity
             android:name=".adminuser.DetailUserActivity"
             android:exported="false"
-            android:label="Detail User"
+            android:label="Detail Pengguna"
             android:parentActivityName=".admin.MainAdminActivity" />
         <activity
             android:name=".admin.AddUserActivity"
             android:exported="false"
-            android:label="Add User"
+            android:label="Tambah Pengguna"
             android:parentActivityName=".admin.MainAdminActivity" />
         <activity
             android:name=".admin.BookUpdateActivity"
             android:exported="false"
-            android:label="Update Book"
+            android:label="Update Buku"
             android:parentActivityName=".adminuser.DetailBookActivity" />
         <activity
             android:name=".adminuser.DetailBookActivity"
             android:exported="false"
-            android:label="Detail Book"
+            android:label="Detail Buku"
             android:parentActivityName=".admin.MainAdminActivity" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false"
-            android:label="Register"
+            android:label="Daftar"
             android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".LoginActivity"
@@ -75,7 +75,7 @@
         <activity
             android:name=".admin.AddBukuActivity"
             android:exported="false"
-            android:label="Add Book"
+            android:label="Tambah Buku"
             android:parentActivityName=".admin.MainAdminActivity" />
         <activity
             android:name=".admin.MainAdminActivity"

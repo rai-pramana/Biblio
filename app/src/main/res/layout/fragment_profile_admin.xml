@@ -12,24 +12,32 @@
 
         <ImageView
             android:id="@+id/iv_foto"
-            android:layout_width="274dp"
+            android:layout_width="0dp"
             android:layout_height="246dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:src="@drawable/account" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/materialDivider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:dividerInsetEnd="16dp"
+            app:dividerInsetStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
 
         <TextView
             android:id="@+id/label_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/user_email"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/tv_role"
             app:layout_constraintTop_toBottomOf="@+id/tv_role" />
 
         <TextView
@@ -39,7 +47,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_no_hp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_email"
             app:layout_constraintTop_toBottomOf="@+id/tv_email" />
 
         <TextView
@@ -49,7 +57,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_gender"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_no_hp"
             app:layout_constraintTop_toBottomOf="@+id/tv_no_hp" />
 
         <TextView
@@ -59,7 +67,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_alamat"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_gender"
             app:layout_constraintTop_toBottomOf="@+id/tv_gender" />
 
         <TextView
@@ -69,31 +77,33 @@
             android:layout_marginTop="8dp"
             android:text="@string/user_tanggal_gabung"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintStart_toStartOf="@+id/label_alamat"
             app:layout_constraintTop_toBottomOf="@+id/tv_alamat" />
 
         <TextView
             android:id="@+id/tv_nama"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="38dp"
             android:text="Nama"
             android:textAlignment="center"
             android:textSize="28sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/iv_foto"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_foto" />
 
         <TextView
             android:id="@+id/tv_role"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="Role"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
+            app:layout_constraintStart_toStartOf="@+id/tv_nama"
+            app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
 
         <TextView
             android:id="@+id/tv_email"
@@ -140,25 +150,29 @@
             app:layout_constraintStart_toEndOf="@+id/label_tanggal_gabung"
             app:layout_constraintTop_toTopOf="@+id/label_tanggal_gabung" />
 
-        <ImageButton
-            android:id="@+id/bt_edit"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+        <Button
+            android:id="@+id/bt_Logout"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="32dp"
-            android:src="@drawable/baseline_edit_note_24"
+            android:text="@string/logout"
+            android:icon="@drawable/baseline_logout_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/iv_foto"
+            app:layout_constraintEnd_toEndOf="@+id/tv_nama"
             app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_gabung" />
 
-        <ImageButton
-            android:id="@+id/bt_Logout"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/baseline_logout_24"
-            app:layout_constraintBottom_toBottomOf="@+id/bt_edit"
-            app:layout_constraintEnd_toEndOf="@+id/iv_foto"
-            app:layout_constraintTop_toTopOf="@+id/bt_edit" />
+        <Button
+            android:id="@+id/bt_edit"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:icon="@drawable/baseline_edit_note_24"
+            android:text="@string/edit"
+            app:layout_constraintEnd_toStartOf="@+id/bt_Logout"
+            app:layout_constraintTop_toTopOf="@+id/bt_Logout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
