@@ -228,6 +228,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ;
         db.execSQL(query_create_tb_list_detail);
 
+        String query_insert_admin =
+                "INSERT INTO tb_pengguna(email, password_pengguna, role, nama) VALUES ('admin', 'admin', 'Admin', 'Admin')";
+        db.execSQL(query_insert_admin);
     }
 
     @Override

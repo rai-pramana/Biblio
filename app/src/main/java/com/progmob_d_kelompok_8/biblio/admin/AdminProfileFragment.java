@@ -112,7 +112,13 @@ public class AdminProfileFragment extends Fragment {
         String no_hp = cursor.getString(5);
         String jenis_kelamin = cursor.getString(6);
         String alamat = cursor.getString(7);
-        byte[] foto = cursor.getBlob(8);
+
+        if (cursor.getBlob(8) != null){
+            byte[] foto = cursor.getBlob(8);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(foto,0, foto.length);
+            ivImg.setImageBitmap(bitmap);
+        }
+
         String tgl_gabung = cursor.getString(9);
 //        int selesai = cursor.getInt(10);
 //        int rencana_dibaca = cursor.getInt(11);
@@ -123,8 +129,6 @@ public class AdminProfileFragment extends Fragment {
         cursor.close();
         db.close();
 
-        Bitmap bitmap = BitmapFactory.decodeByteArray(foto,0, foto.length);
-
         tvNama.setText(nama);
         tvRole.setText(role);
         tvEmail.setText(email);
@@ -132,6 +136,5 @@ public class AdminProfileFragment extends Fragment {
         tvGender.setText(jenis_kelamin);
         tvAlamat.setText(alamat);
         tvTglGabung.setText(tgl_gabung);
-        ivImg.setImageBitmap(bitmap);
     }
 }
