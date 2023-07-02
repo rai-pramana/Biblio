@@ -77,7 +77,13 @@ public class SearchFragment extends Fragment {
     private void filterList(String text) {
         ArrayList<Book> filteredList = new ArrayList<>();
         for (Book book : list){
-            if (book.getJudulBuku().toLowerCase().contains(text.toLowerCase())){
+            if (book.getJudulBuku().toLowerCase().contains(text.toLowerCase())
+                    || book.getNamaGenre().toLowerCase().contains(text.toLowerCase())
+                    || book.getNamaJenisBuku().toLowerCase().contains(text.toLowerCase())
+                    || book.getNamaPenerbit().toLowerCase().contains(text.toLowerCase())
+                    || book.getNamaPenulis().toLowerCase().contains(text.toLowerCase())
+                    || book.getTglTerbit().toLowerCase().contains(text.toLowerCase())
+            ){
                 filteredList.add(book);
             }
         }

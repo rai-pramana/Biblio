@@ -89,14 +89,21 @@ public class PenggunaFragment extends Fragment {
     private void filterList(String text) {
         ArrayList<User> filteredList = new ArrayList<>();
         for (User user : list){
-            if (user.getNama().toLowerCase().contains(text.toLowerCase())){
+            if (user.getNama().toLowerCase().contains(text.toLowerCase())
+                    || user.getEmail().toLowerCase().contains(text.toLowerCase())
+                    || user.getRole().toLowerCase().contains(text.toLowerCase())
+                    || user.getNo_hp().toLowerCase().contains(text.toLowerCase())
+                    || user.getAlamat().toLowerCase().contains(text.toLowerCase())
+                    || user.getJenis_kelamin().toLowerCase().contains(text.toLowerCase())
+                    || user.getTgl_gabung().toLowerCase().contains(text.toLowerCase())
+            ){
                 filteredList.add(user);
             }
         }
 
         if (filteredList.isEmpty()){
             listUserAdapter.setFilteredList(filteredList);
-            Toast.makeText(getActivity(), "User tidak ditemukan", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Pengguna tidak ditemukan", Toast.LENGTH_SHORT).show();
         } else {
             listUserAdapter.setFilteredList(filteredList);
         }
