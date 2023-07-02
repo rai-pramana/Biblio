@@ -11,8 +11,8 @@ import androidx.annotation.Nullable;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
 //    public static final String TAG = DatabaseHelper.class.getSimpleName();
-    private static final String DATABASE_NAME = "db_biblio_last"; // .db
-    private static final int DATABASE_VERSION = 16;
+    private static final String DATABASE_NAME = "db_biblio.db";
+    private static final int DATABASE_VERSION = 1;
 
     public DatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -20,6 +20,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        
 //        // tb_penulis
 //        String query_create_tb_penulis =
 //                "CREATE TABLE tb_penulis" +
@@ -387,38 +388,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return cursor;
     }
-
-//    public void updateData(int idBuku
-//            , String namaJenisBuku
-//            , String namaGenre
-//            , String namaPenulis
-//            , String namaPenerbit
-//            , String judulBuku
-//            , String tglTerbit
-//            , String sinops
-//            , byte[] gambarSampul) {
-//        SQLiteDatabase database = getWritableDatabase();
-//
-//        String query = "UPDATE tb_buku SET " +
-//                "nama_jenis_buku = ?, " +
-//                "nama_genre = ?, " +
-//                "nama_penulis = ?, " +
-//                "nama_penerbit = ?, " +
-//                "judul_buku = ?, " +
-//                "tgl_terbit = ?, " +
-//                "sinopsis = ?, " +
-//                "gambar_sampul = ? " +
-//                "WHERE id = ?";
-//        SQLiteStatement statement = database.compileStatement(query);
-//
-//        statement.bindString(1, namaJenisBuku);
-//        statement.bindString(2, namaGenre);
-//        statement.bindBlob(, gambarSampul);
-//        statement.bindDouble(4, (double)idBuku);
-//
-//        statement.execute();
-//        database.close();
-//    }
 
     public void updateBookData(int idBuku
             , String namaJenisBuku
