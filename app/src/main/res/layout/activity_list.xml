@@ -215,12 +215,13 @@
             android:layout_marginEnd="32dp"
             android:hint="@string/tanggal_mulai"
             app:endIconMode="clear_text"
-            app:helperText="@string/ed_tanggal_yyyy_mm_dd"
+            app:helperText="@string/ed_tanggal_helper"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textFieldReview">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:editable="false"
                 android:id="@+id/et_tanggal_mulai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -238,12 +239,13 @@
             android:layout_marginEnd="32dp"
             android:hint="@string/tanggal_selesai"
             app:endIconMode="clear_text"
-            app:helperText="@string/ed_tanggal_yyyy_mm_dd"
+            app:helperText="@string/ed_tanggal_helper"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textFieldTanggalMulai">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:editable="false"
                 android:id="@+id/et_tanggal_selesai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

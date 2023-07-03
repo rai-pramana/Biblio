@@ -18,13 +18,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.progmob_d_kelompok_8.biblio.tool.ImageTool;
-import com.progmob_d_kelompok_8.biblio.database.DatabaseHelper;
+import com.google.android.material.datepicker.MaterialDatePicker;
+import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.progmob_d_kelompok_8.biblio.R;
+import com.progmob_d_kelompok_8.biblio.database.DatabaseHelper;
+import com.progmob_d_kelompok_8.biblio.tool.ImageTool;
 import com.progmob_d_kelompok_8.biblio.tool.Session;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class BookUpdateActivity extends AppCompatActivity {
 
@@ -55,6 +60,24 @@ public class BookUpdateActivity extends AppCompatActivity {
         chooseImageView = findViewById(R.id.ivEdit);
 
         setView();
+
+        etTglTerbit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MaterialDatePicker<Long> materialDatePicker = MaterialDatePicker.Builder.datePicker()
+                        .setTitleText("Pilih Tanggal Terbit")
+                        .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                        .build();
+                materialDatePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener<Long>() {
+                    @Override
+                    public void onPositiveButtonClick(Long selection) {
+                        String date = new SimpleDateFormat("yyyy-dd-MM", Locale.getDefault()).format(new Date(selection));
+                        etTglTerbit.setText(date);
+                    }
+                });
+                materialDatePicker.show(getSupportFragmentManager(), "tag");
+            }
+        });
 
         chooseImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +120,7 @@ public class BookUpdateActivity extends AppCompatActivity {
 
                     db.close();
 
-                    displayToast("Buku " + judul + " Diupdate");
+                    displayToast("Buku " + judul + " berhasil diupdate");
 
                     finish();
                 }

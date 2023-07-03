@@ -37,7 +37,7 @@
     <string name="ed_genre">Genre</string>
     <string name="ed_jenis_buku">Jenis Buku</string>
     <string name="ed_tanggal_terbit">Tanggal Terbit</string>
-    <string name="ed_tanggal_yyyy_mm_dd">(YYYY-MM-DD)</string>
+    <string name="ed_tanggal_helper">Klik dua kali untuk memilih tanggal</string>
     <string name="ed_sinopsis">Sinopsis</string>
     <string name="bt_tambah">Tambahkan</string>
     <string name="bt_update">Update</string>
@@ -72,11 +72,9 @@
     <string name="user_dijatuhkan">Dijatuhkan:</string>
     <string name="user_skor_mean">Skor Mean:</string>
     <string name="title_activity_main_user">MainUserActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_my_list">My List</string>
-    <string name="title_search">Search</string>
+    <string name="title_beranda">Beranda</string>
+    <string name="title_list">List</string>
+    <string name="title_pencarian">Pencarian</string>
     <string name="books_rank">Peringkat:</string>
     <string name="status_baca_selesai">Selesai</string>
     <string name="status_baca_rencana_dibaca">Rencana Dibaca</string>
@@ -99,7 +97,6 @@
     <string name="simpan">Simpan</string>
     <string name="hapus">Hapus</string>
     <string name="label_status">Status</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="favorit">Favorit</string>
     <string name="ranking">Rangking</string>

@@ -14,9 +14,15 @@ import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.datepicker.MaterialDatePicker;
+import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.progmob_d_kelompok_8.biblio.R;
 import com.progmob_d_kelompok_8.biblio.database.DatabaseHelper;
 import com.progmob_d_kelompok_8.biblio.tool.Session;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -66,6 +72,42 @@ public class ListActivity extends AppCompatActivity {
         rbNull = findViewById(R.id.rb_null);
 
         tvJudul.setText(session.getBookTitle());
+
+        etTglMulai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MaterialDatePicker<Long> materialDatePicker = MaterialDatePicker.Builder.datePicker()
+                        .setTitleText("Pilih Tanggal Mulai")
+                        .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                        .build();
+                materialDatePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener<Long>() {
+                    @Override
+                    public void onPositiveButtonClick(Long selection) {
+                        String date = new SimpleDateFormat("yyyy-dd-MM", Locale.getDefault()).format(new Date(selection));
+                        etTglMulai.setText(date);
+                    }
+                });
+                materialDatePicker.show(getSupportFragmentManager(), "tag");
+            }
+        });
+
+        etTglSelesai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MaterialDatePicker<Long> materialDatePicker = MaterialDatePicker.Builder.datePicker()
+                        .setTitleText("Pilih Tanggal Selesai")
+                        .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                        .build();
+                materialDatePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener<Long>() {
+                    @Override
+                    public void onPositiveButtonClick(Long selection) {
+                        String date = new SimpleDateFormat("yyyy-dd-MM", Locale.getDefault()).format(new Date(selection));
+                        etTglSelesai.setText(date);
+                    }
+                });
+                materialDatePicker.show(getSupportFragmentManager(), "tag");
+            }
+        });
 
         tbFavorite.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

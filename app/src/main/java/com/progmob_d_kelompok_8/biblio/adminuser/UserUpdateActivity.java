@@ -121,7 +121,7 @@ public class UserUpdateActivity extends AppCompatActivity {
 
                     db.close();
 
-                    displayToast("Pengguna " + nama + " diupdate");
+                    displayToast("Pengguna " + nama + " berhasil diupdate");
 
                     if (session.isFromAdminProfileFragment()) session.setFromAdminProfileFragment(false);
                     else if (session.isFromUserProfileFragment()) session.setFromUserProfileFragment(false);
