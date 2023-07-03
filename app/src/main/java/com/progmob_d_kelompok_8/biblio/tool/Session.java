@@ -94,4 +94,13 @@ public class Session {
     public String getBookTitle(){
         return prefs.getString("bookTitle", "DEFAULT");
     }
+
+    public void setFrom(String from){
+        editor.putString("from", from);
+        editor.commit();
+    }
+
+    public String getFrom(){
+        return prefs.getString("from", "DEFAULT");
+    }
 }

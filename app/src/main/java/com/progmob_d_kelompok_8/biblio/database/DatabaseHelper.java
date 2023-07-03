@@ -382,6 +382,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Cursor getBookImage(int bookId){
+        String selectQuery = "select gambar_sampul from tb_buku where id_buku =" + "'"+bookId+"'";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        return cursor;
+    }
+
     public Cursor getBookDate(int bookId){
         String selectQuery = "select * from tb_buku where id_buku =" + "'"+bookId+"'";
 
@@ -463,6 +473,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getOneUserData(int idUser){
         String selectQuery = "select * from tb_pengguna where id_pengguna =" + "'"+idUser+"'";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        return cursor;
+    }
+
+    public Cursor getUserImage(int idUser){
+        String selectQuery = "select foto from tb_pengguna where id_pengguna =" + "'"+idUser+"'";
 
         SQLiteDatabase db = this.getReadableDatabase();
 

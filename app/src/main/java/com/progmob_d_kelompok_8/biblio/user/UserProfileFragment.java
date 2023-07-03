@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.progmob_d_kelompok_8.biblio.R;
+import com.progmob_d_kelompok_8.biblio.adminuser.PreviewImageActivity;
 import com.progmob_d_kelompok_8.biblio.adminuser.UserUpdateActivity;
 import com.progmob_d_kelompok_8.biblio.database.DatabaseHelper;
 import com.progmob_d_kelompok_8.biblio.tool.Session;
@@ -89,6 +90,14 @@ public class UserProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ((MainUserActivity) getActivity()).logout();
+            }
+        });
+
+        ivImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                session.setFrom("UserProfileFragment");
+                startActivity(new Intent(getActivity(), PreviewImageActivity.class));
             }
         });
     }

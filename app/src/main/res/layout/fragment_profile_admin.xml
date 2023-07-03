@@ -10,16 +10,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/iv_foto"
-            android:layout_width="0dp"
-            android:layout_height="246dp"
-            android:layout_marginTop="8dp"
-            android:scaleType="fitCenter"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_gambar_sampul"
+            style="?attr/materialCardViewElevatedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_marginTop="-16dp"
+            android:clickable="true"
+            app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/account" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_foto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/account" />
+
+        </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/materialDivider"
@@ -82,6 +92,7 @@
 
         <TextView
             android:id="@+id/tv_nama"
+            style="@style/TextAppearance.Material3.TitleLarge"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="38dp"
@@ -93,7 +104,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_foto" />
+            app:layout_constraintTop_toBottomOf="@+id/card_view_gambar_sampul" />
 
         <TextView
             android:id="@+id/tv_role"

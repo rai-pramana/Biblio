@@ -87,6 +87,14 @@ public class DetailUserActivity extends AppCompatActivity {
 
     private void setButton() {
 
+        ivImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                session.setFrom("DetailUserActivity");
+                startActivity(new Intent(DetailUserActivity.this, PreviewImageActivity.class));
+            }
+        });
+
         if (session.isUserAdmin()){
             btEdit.setOnClickListener(new View.OnClickListener() {
                 @Override

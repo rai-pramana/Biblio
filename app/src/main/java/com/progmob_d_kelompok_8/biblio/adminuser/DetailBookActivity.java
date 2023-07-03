@@ -69,6 +69,14 @@ public class DetailBookActivity extends AppCompatActivity {
         showData();
         showButton();
         setButton();
+
+        ivImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                session.setFrom("DetailBookActivity");
+                startActivity(new Intent(DetailBookActivity.this, PreviewImageActivity.class));
+            }
+        });
     }
 
     @Override
