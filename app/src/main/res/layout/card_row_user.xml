@@ -16,15 +16,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/iv_gambar_pengguna"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_gambar_pengguna"
             android:layout_width="65dp"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
+            card_view:cardCornerRadius="12dp"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            card_view:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_gambar_pengguna"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars" />
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/tv_item_nama"
@@ -33,11 +41,11 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_toEndOf="@id/iv_gambar_pengguna"
+            android:layout_toEndOf="@id/card_view_gambar_pengguna"
             android:textSize="16sp"
             android:textStyle="bold"
             card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintStart_toEndOf="@+id/iv_gambar_pengguna"
+            card_view:layout_constraintStart_toEndOf="@+id/card_view_gambar_pengguna"
             card_view:layout_constraintTop_toTopOf="parent"
             tools:text="@string/tv_nama" />
 
@@ -47,7 +55,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_toEndOf="@id/iv_gambar_pengguna"
+            android:layout_toEndOf="@id/card_view_gambar_pengguna"
             android:textSize="10sp"
             card_view:layout_constraintEnd_toEndOf="@+id/tv_item_nama"
             card_view:layout_constraintHorizontal_bias="0.0"
@@ -64,7 +72,7 @@
             android:ellipsize="end"
             android:textSize="12sp"
             android:textStyle="bold"
-            card_view:layout_constraintBottom_toBottomOf="@+id/iv_gambar_pengguna"
+            card_view:layout_constraintBottom_toBottomOf="@+id/card_view_gambar_pengguna"
             card_view:layout_constraintEnd_toEndOf="@+id/tv_item_role"
             card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintStart_toStartOf="@+id/tv_item_role"
