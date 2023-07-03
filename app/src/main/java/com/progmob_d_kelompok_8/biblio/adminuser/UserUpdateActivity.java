@@ -86,48 +86,7 @@ public class UserUpdateActivity extends AppCompatActivity {
         btUpdateUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nama = etNama.getText().toString();
-                String email = etEmail.getText().toString();
-                String noHP = etNoHP.getText().toString();
-                String alamat = etAlamat.getText().toString();
-                String password = etPassword.getText().toString();
-
-                rbJenisKelamin = findViewById(rgJenisKelamin.getCheckedRadioButtonId());
-                String jenisKelamin = rbJenisKelamin.getText().toString();
-
-                rbRole = findViewById(rgRole.getCheckedRadioButtonId());
-                String role = rbRole.getText().toString();
-
-                if(nama.isEmpty()
-                        || email.isEmpty()
-                        || noHP.isEmpty()
-                        || jenisKelamin.isEmpty()
-                        || alamat.isEmpty()
-                        || role.isEmpty()
-                        || password.isEmpty()
-                ) {
-                    displayToast("Lengkapi data yang kosong!");
-
-                } else {
-                    db.updateUserData(idUser
-                            , role
-                            , nama
-                            , email
-                            , password
-                            , noHP
-                            , jenisKelamin
-                            , alamat
-                            , ImageTool.imageViewToByte(chooseImageView));
-
-                    db.close();
-
-                    displayToast("Pengguna " + nama + " berhasil diupdate");
-
-                    if (session.isFromAdminProfileFragment()) session.setFromAdminProfileFragment(false);
-                    else if (session.isFromUserProfileFragment()) session.setFromUserProfileFragment(false);
-
-                    finish();
-                }
+                updateData();
             }
         });
     }
@@ -217,5 +176,50 @@ public class UserUpdateActivity extends AppCompatActivity {
 
     private void displayToast(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void updateData(){
+        String nama = etNama.getText().toString();
+        String email = etEmail.getText().toString();
+        String noHP = etNoHP.getText().toString();
+        String alamat = etAlamat.getText().toString();
+        String password = etPassword.getText().toString();
+
+        rbJenisKelamin = findViewById(rgJenisKelamin.getCheckedRadioButtonId());
+        String jenisKelamin = rbJenisKelamin.getText().toString();
+
+        rbRole = findViewById(rgRole.getCheckedRadioButtonId());
+        String role = rbRole.getText().toString();
+
+        if(nama.isEmpty()
+                || email.isEmpty()
+                || noHP.isEmpty()
+                || jenisKelamin.isEmpty()
+                || alamat.isEmpty()
+                || role.isEmpty()
+                || password.isEmpty()
+        ) {
+            displayToast("Lengkapi data yang kosong!");
+
+        } else {
+            db.updateUserData(idUser
+                    , role
+                    , nama
+                    , email
+                    , password
+                    , noHP
+                    , jenisKelamin
+                    , alamat
+                    , ImageTool.imageViewToByte(chooseImageView));
+
+            db.close();
+
+            displayToast("Pengguna " + nama + " berhasil diupdate");
+
+            if (session.isFromAdminProfileFragment()) session.setFromAdminProfileFragment(false);
+            else if (session.isFromUserProfileFragment()) session.setFromUserProfileFragment(false);
+
+            finish();
+        }
     }
 }

@@ -87,43 +87,7 @@ public class AddBukuActivity extends AppCompatActivity {
         btAddBuku.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String judul = etJudul.getText().toString();
-                String tglTerbit = etTglTerbit.getText().toString();
-                String sinopsis = etSinopsis.getText().toString();
-                String penulis = etPenulis.getText().toString();
-                String penerbit = etPenerbit.getText().toString();
-                String genre = etGenre.getText().toString();
-                String jenisBuku = etJenisBuku.getText().toString();
-
-                if(judul.isEmpty()
-                        || tglTerbit.isEmpty()
-                        || sinopsis.isEmpty()
-                        || penulis.isEmpty()
-                        || penerbit.isEmpty()
-                        || genre.isEmpty()
-                        || jenisBuku.isEmpty()
-                        || !isImageExist
-                ) {
-                    displayToast("Lengkapi data yang kosong!");
-
-                } else if (db.getBook(judul, tglTerbit)) {
-                    displayToast("Buku sudah ada");
-
-                } else {
-                    db.addBook(session.getUserId()
-                            , jenisBuku
-                            , genre
-                            , penulis
-                            , penerbit
-                            , judul
-                            , tglTerbit
-                            , sinopsis
-                            , ImageTool.imageViewToByte(chooseImageView));
-
-                    clearView();
-
-                    displayToast("Buku " + judul + " berhasil ditambahkan");
-                }
+                addData();
             }
         });
     }
@@ -190,5 +154,45 @@ public class AddBukuActivity extends AppCompatActivity {
 
     private void displayToast(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void addData(){
+        String judul = etJudul.getText().toString();
+        String tglTerbit = etTglTerbit.getText().toString();
+        String sinopsis = etSinopsis.getText().toString();
+        String penulis = etPenulis.getText().toString();
+        String penerbit = etPenerbit.getText().toString();
+        String genre = etGenre.getText().toString();
+        String jenisBuku = etJenisBuku.getText().toString();
+
+        if(judul.isEmpty()
+                || tglTerbit.isEmpty()
+                || sinopsis.isEmpty()
+                || penulis.isEmpty()
+                || penerbit.isEmpty()
+                || genre.isEmpty()
+                || jenisBuku.isEmpty()
+                || !isImageExist
+        ) {
+            displayToast("Lengkapi data yang kosong!");
+
+        } else if (db.getBook(judul, tglTerbit)) {
+            displayToast("Buku sudah ada");
+
+        } else {
+            db.addBook(session.getUserId()
+                    , jenisBuku
+                    , genre
+                    , penulis
+                    , penerbit
+                    , judul
+                    , tglTerbit
+                    , sinopsis
+                    , ImageTool.imageViewToByte(chooseImageView));
+
+            clearView();
+
+            displayToast("Buku " + judul + " berhasil ditambahkan");
+        }
     }
 }

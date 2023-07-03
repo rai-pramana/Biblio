@@ -1,5 +1,6 @@
 package com.progmob_d_kelompok_8.biblio.user;
 
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.progmob_d_kelompok_8.biblio.R;
 import com.progmob_d_kelompok_8.biblio.database.DatabaseHelper;
 import com.progmob_d_kelompok_8.biblio.tool.Session;
@@ -122,49 +124,7 @@ public class ListActivity extends AppCompatActivity {
             btSave.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
-                    String status_baca = "";
-                    if (rgStatus.getCheckedRadioButtonId() != -1) {
-                        rbStatus = findViewById(rgStatus.getCheckedRadioButtonId());
-                        status_baca = rbStatus.getText().toString();
-                    }
-
-                    String skor = "";
-                    if (rgSkor.getCheckedRadioButtonId() != -1) {
-                        rbSkor = findViewById(rgSkor.getCheckedRadioButtonId());
-                        skor = rbSkor.getText().toString();
-                    }
-
-                    String review = etReview.getText().toString();
-
-                    String tgl_mulai = etTglMulai.getText().toString();
-
-                    String tgl_selesai = etTglSelesai.getText().toString();
-                    if (tgl_selesai.isEmpty()) {
-                        tgl_selesai = String.valueOf(java.time.LocalDate.now());
-                    }
-
-                    if (status_baca.isEmpty()) {
-                        displayToast("Lengkapi status baca");
-
-                    } else {
-                        db.addList(session.getUserId()
-                                , session.getBookIdDetail()
-                                , status_baca
-                                , statusFavorite
-                                , skor
-                                , review
-                                , tgl_mulai
-                                , tgl_selesai);
-                        db.updateAllBookStatistic();
-                        db.updateAllUserStatistic();
-
-                        db.close();
-
-                        displayToast(session.getBookTitle() + " ditambahkan pada list");
-
-                        finish();
-                    }
+                    listBuku();
                 }
             });
 
@@ -174,46 +134,14 @@ public class ListActivity extends AppCompatActivity {
             btSave.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    rbStatus = findViewById(rgStatus.getCheckedRadioButtonId());
-                    String status_baca = rbStatus.getText().toString();
-
-                    rbSkor = findViewById(rgSkor.getCheckedRadioButtonId());
-                    String skor = rbSkor.getText().toString();
-
-                    String review = etReview.getText().toString();
-                    String tgl_mulai = etTglMulai.getText().toString();
-                    String tgl_selesai =etTglSelesai.getText().toString();
-
-                    db.updateList(session.getUserId()
-                            , session.getBookIdDetail()
-                            , status_baca
-                            , statusFavorite
-                            , skor
-                            , review
-                            , tgl_mulai
-                            , tgl_selesai);
-                    db.updateAllBookStatistic();
-                    db.updateAllUserStatistic();
-
-                    db.close();
-
-                    displayToast("Buku "+ session.getBookTitle() + " diperbarui pada list");
-
-                    finish();
+                    updateListBuku();
                 }
             });
 
             btDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    db.deleteList(session.getUserId(), session.getBookIdDetail());
-                    db.updateAllBookStatistic();
-                    db.updateAllUserStatistic();
-
-                    db.close();
-
-                    displayToast("Buku "+ session.getBookTitle() + " dihapus dari list");
-                    finish();
+                    showDialogDelete();
                 }
             });
         }
@@ -264,4 +192,106 @@ public class ListActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 
+    private void listBuku(){
+        String status_baca = "";
+        if (rgStatus.getCheckedRadioButtonId() != -1) {
+            rbStatus = findViewById(rgStatus.getCheckedRadioButtonId());
+            status_baca = rbStatus.getText().toString();
+        }
+
+        String skor = "";
+        if (rgSkor.getCheckedRadioButtonId() != -1) {
+            rbSkor = findViewById(rgSkor.getCheckedRadioButtonId());
+            skor = rbSkor.getText().toString();
+        }
+
+        String review = etReview.getText().toString();
+
+        String tgl_mulai = etTglMulai.getText().toString();
+
+        String tgl_selesai = etTglSelesai.getText().toString();
+        if (tgl_selesai.isEmpty()) {
+            tgl_selesai = String.valueOf(java.time.LocalDate.now());
+        }
+
+        if (status_baca.isEmpty()) {
+            displayToast("Lengkapi status baca");
+
+        } else {
+            db.addList(session.getUserId()
+                    , session.getBookIdDetail()
+                    , status_baca
+                    , statusFavorite
+                    , skor
+                    , review
+                    , tgl_mulai
+                    , tgl_selesai);
+            db.updateAllBookStatistic();
+            db.updateAllUserStatistic();
+
+            db.close();
+
+            displayToast(session.getBookTitle() + " ditambahkan pada list");
+
+            finish();
+        }
+    }
+
+    private void updateListBuku(){
+        rbStatus = findViewById(rgStatus.getCheckedRadioButtonId());
+        String status_baca = rbStatus.getText().toString();
+
+        rbSkor = findViewById(rgSkor.getCheckedRadioButtonId());
+        String skor = rbSkor.getText().toString();
+
+        String review = etReview.getText().toString();
+        String tgl_mulai = etTglMulai.getText().toString();
+        String tgl_selesai =etTglSelesai.getText().toString();
+
+        db.updateList(session.getUserId()
+                , session.getBookIdDetail()
+                , status_baca
+                , statusFavorite
+                , skor
+                , review
+                , tgl_mulai
+                , tgl_selesai);
+        db.updateAllBookStatistic();
+        db.updateAllUserStatistic();
+
+        db.close();
+
+        displayToast("Buku "+ session.getBookTitle() + " diperbarui pada list");
+
+        finish();
+    }
+
+    private void showDialogDelete(){
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(ListActivity.this)
+                .setTitle("Peringatan Penghapusan!")
+                .setIcon(R.drawable.baseline_notification_important_24)
+                .setMessage("Apakah Anda yakin menghapus buku " + session.getBookTitle() + " dari list?")
+                .setPositiveButton("Hapus", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        db.deleteList(session.getUserId(), session.getBookIdDetail());
+                        db.updateAllBookStatistic();
+                        db.updateAllUserStatistic();
+
+                        db.close();
+
+                        displayToast("Buku "+ session.getBookTitle() + " dihapus dari list");
+                        finish();
+                    }
+                })
+                .setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+        builder.create();
+        builder.show();
+    }
 }

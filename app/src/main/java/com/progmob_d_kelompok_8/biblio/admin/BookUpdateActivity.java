@@ -38,7 +38,7 @@ public class BookUpdateActivity extends AppCompatActivity {
     final int REQUEST_CODE_GALLERY = 999;
 
     EditText etJudul, etTglTerbit, etSinopsis, etPenulis, etPenerbit, etGenre, etJenisBuku;
-    Button btAddBuku;
+    Button btUpdateBuku;
     ImageView chooseImageView;
 
     @Override
@@ -56,7 +56,7 @@ public class BookUpdateActivity extends AppCompatActivity {
         etPenerbit = findViewById(R.id.etPenerbitEdit);
         etGenre = findViewById(R.id.etGenreEdit);
         etJenisBuku = findViewById(R.id.etJenisBukuEdit);
-        btAddBuku = findViewById(R.id.updateBukuEdit);
+        btUpdateBuku = findViewById(R.id.updateBukuEdit);
         chooseImageView = findViewById(R.id.ivEdit);
 
         setView();
@@ -86,44 +86,10 @@ public class BookUpdateActivity extends AppCompatActivity {
             }
         });
 
-        btAddBuku.setOnClickListener(new View.OnClickListener() {
+        btUpdateBuku.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String judul = etJudul.getText().toString();
-                String tglTerbit = etTglTerbit.getText().toString();
-                String sinopsis = etSinopsis.getText().toString();
-                String penulis = etPenulis.getText().toString();
-                String penerbit = etPenerbit.getText().toString();
-                String genre = etGenre.getText().toString();
-                String jenisBuku = etJenisBuku.getText().toString();
-
-                if(judul.isEmpty()
-                        || tglTerbit.isEmpty()
-                        || sinopsis.isEmpty()
-                        || penulis.isEmpty()
-                        || penerbit.isEmpty()
-                        || genre.isEmpty()
-                        || jenisBuku.isEmpty()
-                ) {
-                    displayToast("Lengkapi data yang kosong!");
-
-                } else {
-                    db.updateBookData(session.getBookIdDetail()
-                            , jenisBuku
-                            , genre
-                            , penulis
-                            , penerbit
-                            , judul
-                            , tglTerbit
-                            , sinopsis
-                            , ImageTool.imageViewToByte(chooseImageView));
-
-                    db.close();
-
-                    displayToast("Buku " + judul + " berhasil diupdate");
-
-                    finish();
-                }
+                updateData();
             }
         });
     }
@@ -202,5 +168,43 @@ public class BookUpdateActivity extends AppCompatActivity {
 
     private void displayToast(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void updateData(){
+        String judul = etJudul.getText().toString();
+        String tglTerbit = etTglTerbit.getText().toString();
+        String sinopsis = etSinopsis.getText().toString();
+        String penulis = etPenulis.getText().toString();
+        String penerbit = etPenerbit.getText().toString();
+        String genre = etGenre.getText().toString();
+        String jenisBuku = etJenisBuku.getText().toString();
+
+        if(judul.isEmpty()
+                || tglTerbit.isEmpty()
+                || sinopsis.isEmpty()
+                || penulis.isEmpty()
+                || penerbit.isEmpty()
+                || genre.isEmpty()
+                || jenisBuku.isEmpty()
+        ) {
+            displayToast("Lengkapi data yang kosong!");
+
+        } else {
+            db.updateBookData(session.getBookIdDetail()
+                    , jenisBuku
+                    , genre
+                    , penulis
+                    , penerbit
+                    , judul
+                    , tglTerbit
+                    , sinopsis
+                    , ImageTool.imageViewToByte(chooseImageView));
+
+            db.close();
+
+            displayToast("Buku " + judul + " berhasil diupdate");
+
+            finish();
+        }
     }
 }

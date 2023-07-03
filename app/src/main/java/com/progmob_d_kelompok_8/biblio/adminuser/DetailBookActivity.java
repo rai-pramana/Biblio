@@ -12,9 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.progmob_d_kelompok_8.biblio.R;
 import com.progmob_d_kelompok_8.biblio.admin.BookUpdateActivity;
 import com.progmob_d_kelompok_8.biblio.database.DatabaseHelper;
@@ -187,29 +187,30 @@ public class DetailBookActivity extends AppCompatActivity {
     }
 
     private void showDialogDelete(){
-        final AlertDialog.Builder dialogDelete = new AlertDialog.Builder(DetailBookActivity.this);
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(DetailBookActivity.this)
+                .setTitle("Peringatan Penghapusan!")
+                .setIcon(R.drawable.baseline_notification_important_24)
+                .setMessage("Apakah Anda yakin menghapus buku " + judulBuku + "?")
+                .setPositiveButton("Hapus", new DialogInterface.OnClickListener() {
 
-        dialogDelete.setTitle("Peringatan!");
-        dialogDelete.setMessage("Apakah Anda yakin menghapus buku " + judulBuku + "?");
-        dialogDelete.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                db.deleteOneBook(session.getBookIdDetail());
-                db.updateAllUserStatistic();
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        db.deleteOneBook(session.getBookIdDetail());
+                        db.updateAllUserStatistic();
 
-                db.close();
+                        db.close();
 
-                Toast.makeText(getApplicationContext(), "Buku " + judulBuku + " berhasil dihapus",Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        });
+                        Toast.makeText(getApplicationContext(), "Buku " + judulBuku + " berhasil dihapus",Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                })
+                .setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
 
-        dialogDelete.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        dialogDelete.show();
+                    }
+                });
+        builder.create();
+        builder.show();
     }
 }

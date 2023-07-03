@@ -64,46 +64,7 @@ public class AddUserActivity extends AppCompatActivity {
         btAddUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nama = etNama.getText().toString();
-                String email = etEmail.getText().toString();
-                String noHP = etNoHP.getText().toString();
-                String alamat = etAlamat.getText().toString();
-                String password = etPassword.getText().toString();
-
-                rbJenisKelamin = findViewById(rgJenisKelamin.getCheckedRadioButtonId());
-                String jenisKelamin = rbJenisKelamin.getText().toString();
-
-                rbRole = findViewById(rgRole.getCheckedRadioButtonId());
-                String role = rbRole.getText().toString();
-
-                if(nama.isEmpty()
-                        || email.isEmpty()
-                        || noHP.isEmpty()
-                        || jenisKelamin.isEmpty()
-                        || alamat.isEmpty()
-                        || role.isEmpty()
-                        || password.isEmpty()
-                        || !isImageExist
-                ) {
-                    displayToast("Lengkapi data yang kosong!");
-
-                } else if (db.getUser(email, password)) {
-                    displayToast("Pengguna sudah ada");
-
-                } else {
-                    db.addUserData(role
-                            , nama
-                            , email
-                            , password
-                            , noHP
-                            , jenisKelamin
-                            , alamat
-                            , ImageTool.imageViewToByte(chooseImageView));
-
-                    clearView();
-
-                    displayToast("Pengguna " + nama + " berhasil ditambahkan");
-                }
+                addData();
             }
         });
     }
@@ -159,5 +120,48 @@ public class AddUserActivity extends AppCompatActivity {
 
     private void displayToast(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void addData(){
+        String nama = etNama.getText().toString();
+        String email = etEmail.getText().toString();
+        String noHP = etNoHP.getText().toString();
+        String alamat = etAlamat.getText().toString();
+        String password = etPassword.getText().toString();
+
+        rbJenisKelamin = findViewById(rgJenisKelamin.getCheckedRadioButtonId());
+        String jenisKelamin = rbJenisKelamin.getText().toString();
+
+        rbRole = findViewById(rgRole.getCheckedRadioButtonId());
+        String role = rbRole.getText().toString();
+
+        if(nama.isEmpty()
+                || email.isEmpty()
+                || noHP.isEmpty()
+                || jenisKelamin.isEmpty()
+                || alamat.isEmpty()
+                || role.isEmpty()
+                || password.isEmpty()
+                || !isImageExist
+        ) {
+            displayToast("Lengkapi data yang kosong!");
+
+        } else if (db.getUser(email, password)) {
+            displayToast("Pengguna sudah ada");
+
+        } else {
+            db.addUserData(role
+                    , nama
+                    , email
+                    , password
+                    , noHP
+                    , jenisKelamin
+                    , alamat
+                    , ImageTool.imageViewToByte(chooseImageView));
+
+            clearView();
+
+            displayToast("Pengguna " + nama + " berhasil ditambahkan");
+        }
     }
 }
