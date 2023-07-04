@@ -859,7 +859,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public Cursor getReviewBook(int idBuku){
-        String selectQuery = "select p.id_pengguna, p.nama, l.tgl_selesai, l.review, l.skor, p.foto from tb_list_detail as l inner join tb_pengguna as p on p.id_pengguna = l.id_pengguna where id_buku ='"+idBuku+"' and review != ''";
+        String selectQuery = "select p.id_pengguna, p.nama, l.tgl_selesai, l.review, l.skor, p.foto from tb_list_detail as l inner join tb_pengguna as p on p.id_pengguna = l.id_pengguna where id_buku ='"+idBuku+"' and review != '' order by l.tgl_selesai asc";
 
         SQLiteDatabase db = this.getReadableDatabase();
 
