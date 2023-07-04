@@ -265,8 +265,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
             android:text="@string/tambahkan_ke_list"
             app:icon="@drawable/baseline_playlist_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/tv_sinopsis"
             app:layout_constraintTop_toBottomOf="@+id/materialDivider4" />
 
@@ -276,8 +278,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
             android:text="@string/update_list"
             app:icon="@drawable/baseline_edit_note_24"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/tv_sinopsis"
             app:layout_constraintTop_toBottomOf="@+id/materialDivider4" />
 

@@ -58,7 +58,7 @@
             android:layout_marginStart="2dp"
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/card_view_gambar_pengguna"
-            android:textSize="10sp"
+            android:textSize="12sp"
             card_view:layout_constraintStart_toEndOf="@+id/iv_rating"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_item_nama"
             tools:text="8" />
@@ -69,15 +69,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/card_view_gambar_pengguna"
-            android:textSize="10sp"
+            android:textSize="12sp"
             card_view:layout_constraintStart_toEndOf="@+id/tv_item_rating_personal"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_item_nama"
             tools:text="/10" />
 
         <ImageView
             android:id="@+id/iv_rating"
-            android:layout_width="13dp"
-            android:layout_height="14dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_marginTop="5dp"
             card_view:layout_constraintBottom_toBottomOf="@+id/tv_item_rating_personal"
             card_view:layout_constraintStart_toStartOf="@+id/tv_item_nama"
@@ -89,15 +89,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textSize="10sp"
+            android:textSize="12sp"
             card_view:layout_constraintEnd_toEndOf="@+id/tv_item_nama"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_item_nama"
             tools:text="YYYY-MM-DD" />
 
         <ImageView
             android:id="@+id/iv_tanggal"
-            android:layout_width="13dp"
-            android:layout_height="14dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="2dp"
             card_view:layout_constraintEnd_toStartOf="@+id/tv_item_tanggal"
@@ -111,7 +111,7 @@
             android:layout_marginTop="6dp"
             android:layout_marginBottom="10dp"
             android:ellipsize="end"
-            android:textSize="12sp"
+            android:textSize="14sp"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="@+id/tv_item_nama"
             card_view:layout_constraintHorizontal_bias="0.0"

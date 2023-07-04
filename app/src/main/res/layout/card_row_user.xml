@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/card_view_gambar_pengguna"
-            android:textSize="10sp"
+            android:textSize="12sp"
             card_view:layout_constraintEnd_toEndOf="@+id/tv_item_nama"
             card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintStart_toStartOf="@+id/tv_item_nama"
