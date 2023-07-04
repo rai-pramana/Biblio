@@ -1,12 +1,12 @@
 package com.progmob_d_kelompok_8.biblio.admin;
 
-import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,9 +15,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 import com.progmob_d_kelompok_8.biblio.R;
 import com.progmob_d_kelompok_8.biblio.database.DatabaseHelper;
@@ -57,7 +59,10 @@ public class AddUserActivity extends AppCompatActivity {
         chooseImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ActivityCompat.requestPermissions(AddUserActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},REQUEST_CODE_GALLERY);
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
+                intent.addCategory(Intent.CATEGORY_OPENABLE);
+                pickImageActivityResultLauncher.launch(intent);
             }
         });
 
@@ -69,6 +74,34 @@ public class AddUserActivity extends AppCompatActivity {
         });
     }
 
+    ActivityResultLauncher<Intent> pickImageActivityResultLauncher =
+            registerForActivityResult(
+                    new ActivityResultContracts.StartActivityForResult(),
+                    new ActivityResultCallback<ActivityResult>() {
+                        @Override
+                        public void onActivityResult(ActivityResult result) {
+                            if (result.getResultCode() == Activity.RESULT_OK){
+                                Intent data = result.getData();
+                                Uri uri = data.getData();
+
+                                if (uri != null) {
+                                    try {
+                                        InputStream inputStream = getContentResolver().openInputStream(uri);
+
+                                        Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                                        chooseImageView.setImageBitmap(bitmap);
+                                        isImageExist = true;
+
+                                    } catch (FileNotFoundException e) {
+                                        e.printStackTrace();
+                                    }
+                                } else {
+                                    Log.d("PhotoPicker", "No media selected");
+                                }
+                            }
+                        }
+                    });
+
     public void clearView(){
         etNama.setText("");
         etEmail.setText("");
@@ -77,45 +110,6 @@ public class AddUserActivity extends AppCompatActivity {
         etPassword.setText("");
         chooseImageView.setImageResource(R.drawable.baseline_image_24);
         isImageExist = false;
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-
-        if(requestCode == REQUEST_CODE_GALLERY){
-            if(grantResults.length >0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setType("image/*");
-                startActivityForResult(intent, REQUEST_CODE_GALLERY);
-            }
-            else {
-                displayToast("Anda tidak memiliki izin untuk mengakses file!");
-            }
-            return;
-        }
-
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        if(requestCode == REQUEST_CODE_GALLERY && resultCode == RESULT_OK && data != null){
-            Uri uri = data.getData();
-
-            try {
-                InputStream inputStream = getContentResolver().openInputStream(uri);
-
-                Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-                chooseImageView.setImageBitmap(bitmap);
-                isImageExist = true;
-
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
-
-        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void displayToast(String message){
