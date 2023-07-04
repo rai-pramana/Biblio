@@ -108,7 +108,7 @@ public class AddUserActivity extends AppCompatActivity {
         etNoHP.setText("");
         etAlamat.setText("");
         etPassword.setText("");
-        chooseImageView.setImageResource(R.drawable.baseline_image_24);
+        chooseImageView.setImageResource(R.drawable.baseline_add_photo_alternate_24);
         isImageExist = false;
     }
 
