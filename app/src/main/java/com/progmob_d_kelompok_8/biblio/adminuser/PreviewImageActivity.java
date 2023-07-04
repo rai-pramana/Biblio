@@ -59,10 +59,14 @@ public class PreviewImageActivity extends AppCompatActivity {
 
         byte[] gambarSampul = cursor.getBlob(0);
 
+        if (gambarSampul != null) {
+            Bitmap bitmap = BitmapFactory.decodeByteArray(gambarSampul,0, gambarSampul.length);
+            ivImg.setImageBitmap(bitmap);
+        }
+
         cursor.close();
         db.close();
 
-        Bitmap bitmap = BitmapFactory.decodeByteArray(gambarSampul,0, gambarSampul.length);
-        ivImg.setImageBitmap(bitmap);
+
     }
 }
