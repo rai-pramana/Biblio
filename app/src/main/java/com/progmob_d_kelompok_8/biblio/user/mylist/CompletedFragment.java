@@ -22,7 +22,7 @@ import com.progmob_d_kelompok_8.biblio.tool.Session;
 
 import java.util.ArrayList;
 
-public class FavoritFragment extends Fragment {
+public class CompletedFragment extends Fragment {
 
     private DatabaseHelper db;
     private Session session;
@@ -39,7 +39,7 @@ public class FavoritFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favorit, container, false);
+        return inflater.inflate(R.layout.fragment_completed, container, false);
     }
 
     @Override
@@ -74,7 +74,7 @@ public class FavoritFragment extends Fragment {
     }
 
     public ArrayList<ReviewedBook> getListReviewedBooks() {
-        Cursor cursor = db.getReviewedFavoriteBookData(session.getUserId(), "Favorite");
+        Cursor cursor = db.getReviewedBookData(session.getUserId(), "Selesai");
 
         ArrayList<ReviewedBook> listReviewedBook = new ArrayList<>();
         while (cursor.moveToNext()){

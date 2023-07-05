@@ -15,17 +15,17 @@ public class MyListViewPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
-                return new SelesaiFragment();
+                return new CompletedFragment();
             case 1:
-                return new RencanaDibacaFragment();
+                return new PlanToReadFragment();
             case 2:
-                return new SedangDibacaFragment();
+                return new ReadingFragment();
             case 3:
-                return new DijatuhkanFragment();
+                return new DroppedFragment();
             case 4:
-                return new FavoritFragment();
+                return new FavoriteFragment();
             default:
-                return new SelesaiFragment();
+                return new CompletedFragment();
         }
     }
 

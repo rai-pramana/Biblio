@@ -32,7 +32,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class AddBukuActivity extends AppCompatActivity {
+public class AddBookActivity extends AppCompatActivity {
 
     private DatabaseHelper db;
     private Session session;
@@ -46,7 +46,7 @@ public class AddBukuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_buku);
+        setContentView(R.layout.activity_add_book);
 
         session = new Session(this);
         db = new DatabaseHelper(this);

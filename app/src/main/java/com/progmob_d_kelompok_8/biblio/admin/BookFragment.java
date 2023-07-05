@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,7 +24,7 @@ import com.progmob_d_kelompok_8.biblio.tool.Session;
 
 import java.util.ArrayList;
 
-public class BukuFragment extends Fragment {
+public class BookFragment extends Fragment {
 
     private DatabaseHelper db;
     private Session session;
@@ -43,7 +42,7 @@ public class BukuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_buku, container, false);
+        return inflater.inflate(R.layout.fragment_book, container, false);
     }
 
     @Override
@@ -77,7 +76,7 @@ public class BukuFragment extends Fragment {
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), AddBukuActivity.class));
+                startActivity(new Intent(getActivity(), AddBookActivity.class));
             }
         });
 

@@ -79,7 +79,7 @@
             android:exported="false"
             android:label="Login" />
         <activity
-            android:name=".admin.AddBukuActivity"
+            android:name=".admin.AddBookActivity"
             android:exported="false"
             android:label="Tambah Buku"
             android:parentActivityName=".admin.MainAdminActivity" />

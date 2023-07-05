@@ -26,7 +26,7 @@ import com.progmob_d_kelompok_8.biblio.tool.UserListAdapter;
 import java.util.ArrayList;
 
 
-public class PenggunaFragment extends Fragment {
+public class UserFragment extends Fragment {
 
     private DatabaseHelper db;
     private Session session;
@@ -45,7 +45,7 @@ public class PenggunaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pengguna, container, false);
+        return inflater.inflate(R.layout.fragment_user, container, false);
     }
 
     @Override

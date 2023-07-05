@@ -7,15 +7,15 @@
 
     <fragment
         android:id="@+id/navigation_buku"
-        android:name="com.progmob_d_kelompok_8.biblio.admin.BukuFragment"
+        android:name="com.progmob_d_kelompok_8.biblio.admin.BookFragment"
         android:label="@string/title_buku"
-        tools:layout="@layout/fragment_buku" />
+        tools:layout="@layout/fragment_book" />
 
     <fragment
         android:id="@+id/navigation_pengguna"
-        android:name="com.progmob_d_kelompok_8.biblio.admin.PenggunaFragment"
+        android:name="com.progmob_d_kelompok_8.biblio.admin.UserFragment"
         android:label="@string/title_pengguna"
-        tools:layout="@layout/fragment_pengguna" />
+        tools:layout="@layout/fragment_user" />
 
     <fragment
         android:id="@+id/navigation_profile_admin"

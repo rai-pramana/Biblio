@@ -22,7 +22,7 @@ import com.progmob_d_kelompok_8.biblio.tool.Session;
 
 import java.util.ArrayList;
 
-public class DijatuhkanFragment extends Fragment {
+public class DroppedFragment extends Fragment {
 
     private DatabaseHelper db;
     private Session session;
@@ -39,7 +39,7 @@ public class DijatuhkanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dijatuhkan, container, false);
+        return inflater.inflate(R.layout.fragment_dropped, container, false);
     }
 
     @Override
