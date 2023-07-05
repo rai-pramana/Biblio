@@ -65,16 +65,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             session.setUserId(db.getUserId(email, pass));
 
             if(db.isUserAdmin(session.getUserId())){
-                session.setUserAdmin(true);
-                startActivity(new Intent(LoginActivity.this, MainAdminActivity.class));
-                db.close();
                 Toast.makeText(getApplicationContext(), "Login Berhasil", Toast.LENGTH_SHORT).show();
 
+                session.setUserAdmin(true);
+                startActivity(new Intent(LoginActivity.this, MainAdminActivity.class));
+
+                db.close();
                 finish();
 
             } else {
-                startActivity(new Intent(LoginActivity.this, MainUserActivity.class));
                 Toast.makeText(getApplicationContext(), "Login Berhasil", Toast.LENGTH_SHORT).show();
+
+                startActivity(new Intent(LoginActivity.this, MainUserActivity.class));
 
                 db.close();
                 finish();
