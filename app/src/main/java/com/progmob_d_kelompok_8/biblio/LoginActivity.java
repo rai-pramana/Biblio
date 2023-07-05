@@ -68,10 +68,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 session.setUserAdmin(true);
                 startActivity(new Intent(LoginActivity.this, MainAdminActivity.class));
                 db.close();
+                Toast.makeText(getApplicationContext(), "Login Berhasil", Toast.LENGTH_SHORT).show();
+
                 finish();
 
             } else {
                 startActivity(new Intent(LoginActivity.this, MainUserActivity.class));
+                Toast.makeText(getApplicationContext(), "Login Berhasil", Toast.LENGTH_SHORT).show();
+
                 db.close();
                 finish();
             }
