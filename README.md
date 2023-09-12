@@ -1,4 +1,6 @@
 # Biblio
-Tugas Progmod D
+Tugas Pemrograman Mobile D
+
+Aplikasi listing buku
 
 Kelompok 8
