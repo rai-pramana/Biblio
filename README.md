@@ -1,6 +1,6 @@
 # Biblio
 Tugas Pemrograman Mobile D
 
-Aplikasi listing buku
+Aplikasi Listing Buku
 
 Kelompok 8
