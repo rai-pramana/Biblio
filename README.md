@@ -71,21 +71,21 @@
 
 ### Fitur Pengguna
 
-| Beranda                                 | Pencarian                                   | Detail Buku                                       |
-| --------------------------------------- | ------------------------------------------- | ------------------------------------------------- |
-| ![Beranda](screenshot/Pengguna/Beranda) | ![Pencarian](screenshot/Pengguna/Pencarian) | ![Detail Buku](screenshot/Pengguna/Detail%20Buku) |
+| Beranda                                                                       | Pencarian                                                                         | Detail Buku                                                                      |
+| ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| ![Beranda](screenshot/Pengguna/Beranda/Screenshot_20230704-233947_Biblio.png) | ![Pencarian](screenshot/Pengguna/Pencarian/Screenshot_20230704-234042_Biblio.png) | ![Detail Buku](screenshot/Pengguna/Detail%20Buku/Screenshot_20230704-234338.png) |
 
 ### My List
 
-| Favorit                                         | Sedang Dibaca                                         | Selesai Dibaca                                  |
-| ----------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------- |
-| ![Favorit](screenshot/Pengguna/Fragment%20List) | ![Sedang Dibaca](screenshot/Pengguna/Fragment%20List) | ![Selesai](screenshot/Pengguna/Fragment%20List) |
+| Favorit                                                                               | Sedang Dibaca                                                                               | Selesai Dibaca                                                                 |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| ![Favorit](screenshot/Pengguna/Fragment%20List/Screenshot_20230704-234231_Biblio.png) | ![Sedang Dibaca](screenshot/Pengguna/Fragment%20List/Screenshot_20230704-234227_Biblio.png) | ![Selesai](screenshot/Pengguna/Fragment%20List/Screenshot_20230704-234223.png) |
 
 ### Fitur Admin
 
-| Dashboard Admin                                                | Manajemen Buku                                 | Manajemen Pengguna                                                           |
-| -------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------- |
-| ![Admin](screenshot/Admin/Buku/Screenshot_20230704-233244.png) | ![Tambah Buku](screenshot/Admin/Tambah%20Buku) | ![Pengguna](screenshot/Admin/Pengguna/Screenshot_20230704-233614_Biblio.png) |
+| Dashboard Admin                                                | Manajemen Buku                                                                       | Manajemen Pengguna                                                           |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| ![Admin](screenshot/Admin/Buku/Screenshot_20230704-233244.png) | ![Tambah Buku](screenshot/Admin/Tambah%20Buku/Screenshot_20230704-233335_Biblio.png) | ![Pengguna](screenshot/Admin/Pengguna/Screenshot_20230704-233614_Biblio.png) |
 
 ### Dark Theme
 
