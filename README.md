@@ -63,101 +63,117 @@
 
 ## 📸 Screenshot Aplikasi
 
-### 🔐 Autentikasi
+### 🔐 Login
 
-| Login                                                     | Registrasi                                                         |
-| --------------------------------------------------------- | ------------------------------------------------------------------ |
-| ![Login](screenshot/Login/Screenshot_20230704-231329.png) | ![Daftar](screenshot/Daftar/Screenshot_20230704-231334_Biblio.png) |
+| Login                                                     |
+| --------------------------------------------------------- |
+| ![Login](screenshot/Login/Screenshot_20230704-231329.png) |
 
-### 👤 Fitur Pengguna
+### 📋 Daftar
 
-#### Beranda & Navigasi
+| Registrasi                                                         |
+| ------------------------------------------------------------------ |
+| ![Daftar](screenshot/Daftar/Screenshot_20230704-231334_Biblio.png) |
 
-| Beranda                                                                       | Beranda - Most Popular                                                             | Beranda - Rank Book                                                             |
-| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| ![Beranda](screenshot/Pengguna/Beranda/Screenshot_20230704-233947_Biblio.png) | ![Most Popular](screenshot/Pengguna/Beranda/Screenshot_20230704-233951_Biblio.png) | ![Rank Book](screenshot/Pengguna/Beranda/Screenshot_20230704-233956_Biblio.png) |
+### 👤 Pengguna
 
-#### Pencarian & Detail Buku
+#### Beranda
 
-| Pencarian                                                                         | Detail Buku 1                                                                    | Detail Buku 2                                                                             |
-| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| ![Pencarian](screenshot/Pengguna/Pencarian/Screenshot_20230704-234042_Biblio.png) | ![Detail Buku](screenshot/Pengguna/Detail%20Buku/Screenshot_20230704-234338.png) | ![Detail Buku 2](screenshot/Pengguna/Detail%20Buku/Screenshot_20230704-234341_Biblio.png) |
+| Beranda Home                                                                  | Beranda Most Popular                                                               |
+| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| ![Beranda](screenshot/Pengguna/Beranda/Screenshot_20230704-233947_Biblio.png) | ![Most Popular](screenshot/Pengguna/Beranda/Screenshot_20230704-233950_Biblio.png) |
 
-| Detail Buku 3                                                                             | Detail Buku 4                                                                             | Detail Buku 5                                                                             |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| ![Detail Buku 3](screenshot/Pengguna/Detail%20Buku/Screenshot_20230704-234345_Biblio.png) | ![Detail Buku 4](screenshot/Pengguna/Detail%20Buku/Screenshot_20230704-234349_Biblio.png) | ![Detail Buku 5](screenshot/Pengguna/Detail%20Buku/Screenshot_20230704-234433_Biblio.png) |
+#### Pencarian
 
-#### My List - Fragment List
+| Pencarian 1                                                                       | Pencarian 2                                                                         |
+| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| ![Pencarian](screenshot/Pengguna/Pencarian/Screenshot_20230704-234019_Biblio.png) | ![Pencarian 2](screenshot/Pengguna/Pencarian/Screenshot_20230704-234042_Biblio.png) |
 
-| Favorit                                                                               | Sedang Dibaca                                                                               | Selesai Dibaca                                                                 |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| ![Favorit](screenshot/Pengguna/Fragment%20List/Screenshot_20230704-234231_Biblio.png) | ![Sedang Dibaca](screenshot/Pengguna/Fragment%20List/Screenshot_20230704-234227_Biblio.png) | ![Selesai](screenshot/Pengguna/Fragment%20List/Screenshot_20230704-234223.png) |
+#### Detail Buku
 
-#### Review & Rating
+| Detail Buku 1                                                                    | Detail Buku 2                                                                      | Detail Buku 3                                                                             |
+| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ![Detail Buku](screenshot/Pengguna/Detail%20Buku/Screenshot_20230704-234338.png) | ![Detail Buku 2](screenshot/Pengguna/Detail%20Buku/Screenshot_20230704-234423.png) | ![Detail Buku 3](screenshot/Pengguna/Detail%20Buku/Screenshot_20230704-234546_Biblio.png) |
 
-| Review 1                                                                    | Review 2                                                                      | Review 3                                                                      |
-| --------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| ![Review](screenshot/Pengguna/Review/Screenshot_20230704-234357_Biblio.png) | ![Review 2](screenshot/Pengguna/Review/Screenshot_20230704-234400_Biblio.png) | ![Review 3](screenshot/Pengguna/Review/Screenshot_20230704-234404_Biblio.png) |
+#### Detail Pengguna
 
-| Review 4                                                                      | Review 5                                                                      | Review 6                                                                      |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| ![Review 4](screenshot/Pengguna/Review/Screenshot_20230704-234408_Biblio.png) | ![Review 5](screenshot/Pengguna/Review/Screenshot_20230704-234410_Biblio.png) | ![Review 6](screenshot/Pengguna/Review/Screenshot_20230704-234413_Biblio.png) |
+| Detail Pengguna                                                                                 |
+| ----------------------------------------------------------------------------------------------- |
+| ![Detail Pengguna](screenshot/Pengguna/Detail%20Pengguna/Screenshot_20230704-234658_Biblio.png) |
 
-#### Tambah & Update List
+#### Fragment List
 
-| Tambah List 1                                                                           | Tambah List 2                                                                             | Tambah List 3                                                                             |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| ![Tambah List](screenshot/Pengguna/Tambah%20List/Screenshot_20230704-234416_Biblio.png) | ![Tambah List 2](screenshot/Pengguna/Tambah%20List/Screenshot_20230704-234418_Biblio.png) | ![Tambah List 3](screenshot/Pengguna/Tambah%20List/Screenshot_20230704-234422_Biblio.png) |
+| List 1                                                                               | List 2                                                                                        | List 3                                                                                        |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| ![Fragment List](screenshot/Pengguna/Fragment%20List/Screenshot_20230704-234223.png) | ![Fragment List 2](screenshot/Pengguna/Fragment%20List/Screenshot_20230704-234225_Biblio.png) | ![Fragment List 3](screenshot/Pengguna/Fragment%20List/Screenshot_20230704-234227_Biblio.png) |
 
-| Update List 1                                                                           | Update List 2                                                                             | Update List 3                                                                             |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| ![Update List](screenshot/Pengguna/Update%20List/Screenshot_20230704-234426_Biblio.png) | ![Update List 2](screenshot/Pengguna/Update%20List/Screenshot_20230704-234429_Biblio.png) | ![Update List 3](screenshot/Pengguna/Update%20List/Screenshot_20230704-234516_Biblio.png) |
+| List 4                                                                                        | List 5                                                                                        |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| ![Fragment List 4](screenshot/Pengguna/Fragment%20List/Screenshot_20230704-234229_Biblio.png) | ![Fragment List 5](screenshot/Pengguna/Fragment%20List/Screenshot_20230704-234231_Biblio.png) |
+
+#### Review
+
+| Review                                                                      |
+| --------------------------------------------------------------------------- |
+| ![Review](screenshot/Pengguna/Review/Screenshot_20230704-234648_Biblio.png) |
+
+#### Tambah List
+
+| Tambah List 1                                                                           | Tambah List 2                                                                             |
+| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ![Tambah List](screenshot/Pengguna/Tambah%20List/Screenshot_20230704-234603_Biblio.png) | ![Tambah List 2](screenshot/Pengguna/Tambah%20List/Screenshot_20230704-234606_Biblio.png) |
+
+#### Update List
+
+| Update List                                                                             |
+| --------------------------------------------------------------------------------------- |
+| ![Update List](screenshot/Pengguna/Update%20List/Screenshot_20230704-234635_Biblio.png) |
 
 #### Profil Pengguna
 
 | Profil 1                                                                               | Profil 2                                                                                 | Profil 3                                                                                 |
 | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| ![Profil](screenshot/Pengguna/Profil%20Pengguna/Screenshot_20230704-234202_Biblio.png) | ![Profil 2](screenshot/Pengguna/Profil%20Pengguna/Screenshot_20230704-234205_Biblio.png) | ![Profil 3](screenshot/Pengguna/Profil%20Pengguna/Screenshot_20230704-234208_Biblio.png) |
+| ![Profil](screenshot/Pengguna/Profil%20Pengguna/Screenshot_20230704-234807_Biblio.png) | ![Profil 2](screenshot/Pengguna/Profil%20Pengguna/Screenshot_20230704-234809_Biblio.png) | ![Profil 3](screenshot/Pengguna/Profil%20Pengguna/Screenshot_20230704-234819_Biblio.png) |
 
-| Profil 4                                                                                 | Profil 5                                                                                 | Detail Pengguna                                                                                 |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| ![Profil 4](screenshot/Pengguna/Profil%20Pengguna/Screenshot_20230704-234212_Biblio.png) | ![Profil 5](screenshot/Pengguna/Profil%20Pengguna/Screenshot_20230704-234219_Biblio.png) | ![Detail Pengguna](screenshot/Pengguna/Detail%20Pengguna/Screenshot_20230704-234353_Biblio.png) |
+| Profil 4                                                                                 |
+| ---------------------------------------------------------------------------------------- |
+| ![Profil 4](screenshot/Pengguna/Profil%20Pengguna/Screenshot_20230704-234823_Biblio.png) |
 
-### 👨‍💼 Fitur Administrator
+### 👨‍💼 Admin
 
-#### Dashboard Admin - Manajemen Buku
+#### Buku
 
-| List Buku                                                           | Tambah Buku 1                                                                        | Tambah Buku 2                                                                          |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| ![Admin Buku](screenshot/Admin/Buku/Screenshot_20230704-233244.png) | ![Tambah Buku](screenshot/Admin/Tambah%20Buku/Screenshot_20230704-233335_Biblio.png) | ![Tambah Buku 2](screenshot/Admin/Tambah%20Buku/Screenshot_20230704-233338_Biblio.png) |
+| Admin Buku 1                                                        | Admin Buku 2                                                                 |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| ![Admin Buku](screenshot/Admin/Buku/Screenshot_20230704-233244.png) | ![Admin Buku 2](screenshot/Admin/Buku/Screenshot_20230704-233325_Biblio.png) |
+
+#### Detail Buku
 
 | Detail Buku Admin 1                                                                        | Detail Buku Admin 2                                                                          | Detail Buku Admin 3                                                                          |
 | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | ![Detail Buku Admin](screenshot/Admin/Detail%20Buku/Screenshot_20230704-233427_Biblio.png) | ![Detail Buku Admin 2](screenshot/Admin/Detail%20Buku/Screenshot_20230704-233430_Biblio.png) | ![Detail Buku Admin 3](screenshot/Admin/Detail%20Buku/Screenshot_20230704-233433_Biblio.png) |
 
-| Detail Buku Admin 4                                                                          | Update Buku 1                                                                        | Update Buku 2                                                                          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| ![Detail Buku Admin 4](screenshot/Admin/Detail%20Buku/Screenshot_20230704-233741_Biblio.png) | ![Update Buku](screenshot/Admin/Update%20Buku/Screenshot_20230704-233736_Biblio.png) | ![Update Buku 2](screenshot/Admin/Update%20Buku/Screenshot_20230704-233738_Biblio.png) |
+| Detail Buku Admin 4                                                                          |
+| -------------------------------------------------------------------------------------------- |
+| ![Detail Buku Admin 4](screenshot/Admin/Detail%20Buku/Screenshot_20230704-233741_Biblio.png) |
 
-#### Dashboard Admin - Manajemen Pengguna
+#### Detail Pengguna
 
-| List Pengguna                                                                | Tambah Pengguna                                                                              | Detail Pengguna 1                                                                            |
-| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| ![Pengguna](screenshot/Admin/Pengguna/Screenshot_20230704-233614_Biblio.png) | ![Tambah Pengguna](screenshot/Admin/Tambah%20Pengguna/Screenshot_20230704-233622_Biblio.png) | ![Detail Pengguna](screenshot/Admin/Detail%20Pengguna/Screenshot_20230704-233655_Biblio.png) |
+| Detail Pengguna Admin 1                                                                            | Detail Pengguna Admin 2                                                                              | Detail Pengguna Admin 3                                                                              |
+| -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| ![Detail Pengguna Admin](screenshot/Admin/Detail%20Pengguna/Screenshot_20230704-233655_Biblio.png) | ![Detail Pengguna Admin 2](screenshot/Admin/Detail%20Pengguna/Screenshot_20230704-233658_Biblio.png) | ![Detail Pengguna Admin 3](screenshot/Admin/Detail%20Pengguna/Screenshot_20230704-233701_Biblio.png) |
 
-| Detail Pengguna 2                                                                              | Detail Pengguna 3                                                                              | Detail Pengguna 4                                                                              |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| ![Detail Pengguna 2](screenshot/Admin/Detail%20Pengguna/Screenshot_20230704-233658_Biblio.png) | ![Detail Pengguna 3](screenshot/Admin/Detail%20Pengguna/Screenshot_20230704-233701_Biblio.png) | ![Detail Pengguna 4](screenshot/Admin/Detail%20Pengguna/Screenshot_20230704-233732_Biblio.png) |
+| Detail Pengguna Admin 4                                                                              |
+| ---------------------------------------------------------------------------------------------------- |
+| ![Detail Pengguna Admin 4](screenshot/Admin/Detail%20Pengguna/Screenshot_20230704-233732_Biblio.png) |
 
-| Update Pengguna 1                                                                            | Update Pengguna 2                                                                              | Update Pengguna 3                                                                              |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| ![Update Pengguna](screenshot/Admin/Update%20Pengguna/Screenshot_20230704-233704_Biblio.png) | ![Update Pengguna 2](screenshot/Admin/Update%20Pengguna/Screenshot_20230704-233707_Biblio.png) | ![Update Pengguna 3](screenshot/Admin/Update%20Pengguna/Screenshot_20230704-233710_Biblio.png) |
+#### Pengguna
 
-| Update Pengguna 4                                                                              | Update Pengguna 5                                                                              | Pencarian Admin                                                                     |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| ![Update Pengguna 4](screenshot/Admin/Update%20Pengguna/Screenshot_20230704-233713_Biblio.png) | ![Update Pengguna 5](screenshot/Admin/Update%20Pengguna/Screenshot_20230704-233729_Biblio.png) | ![Pencarian Admin](screenshot/Admin/Pengguna/Screenshot_20230704-233619_Biblio.png) |
+| List Pengguna                                                                | Pencarian Pengguna                                                                     |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| ![Pengguna](screenshot/Admin/Pengguna/Screenshot_20230704-233614_Biblio.png) | ![Pencarian Pengguna](screenshot/Admin/Pengguna/Screenshot_20230704-233619_Biblio.png) |
 
-#### Profil Administrator
+#### Profil Admin
 
 | Profil Admin 1                                                                         | Profil Admin 2                                                                           | Profil Admin 3                                                                           |
 | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -166,6 +182,34 @@
 | Profil Admin 4                                                                           |
 | ---------------------------------------------------------------------------------------- |
 | ![Profil Admin 4](screenshot/Admin/Profil%20Admin/Screenshot_20230704-233847_Biblio.png) |
+
+#### Tambah Buku
+
+| Tambah Buku 1                                                                        | Tambah Buku 2                                                                          | Tambah Buku 3                                                                         |
+| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| ![Tambah Buku](screenshot/Admin/Tambah%20Buku/Screenshot_20230704-233335_Biblio.png) | ![Tambah Buku 2](screenshot/Admin/Tambah%20Buku/Screenshot_20230704-233339_Biblio.png) | ![Tambah Buku 3](screenshot/Admin/Tambah%20Buku/Screenshot_20230704-233401_Files.png) |
+
+| Tambah Buku 4                                                                          |
+| -------------------------------------------------------------------------------------- |
+| ![Tambah Buku 4](screenshot/Admin/Tambah%20Buku/Screenshot_20230704-233408_Biblio.png) |
+
+#### Tambah Pengguna
+
+| Tambah Pengguna 1                                                                            | Tambah Pengguna 2                                                                              |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| ![Tambah Pengguna](screenshot/Admin/Tambah%20Pengguna/Screenshot_20230704-233626_Biblio.png) | ![Tambah Pengguna 2](screenshot/Admin/Tambah%20Pengguna/Screenshot_20230704-233629_Biblio.png) |
+
+#### Update Buku
+
+| Update Buku 1                                                                        | Update Buku 2                                                                          |
+| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| ![Update Buku](screenshot/Admin/Update%20Buku/Screenshot_20230704-233521_Biblio.png) | ![Update Buku 2](screenshot/Admin/Update%20Buku/Screenshot_20230704-233524_Biblio.png) |
+
+#### Update Pengguna
+
+| Update Pengguna 1                                                                            | Update Pengguna 2                                                                              |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| ![Update Pengguna](screenshot/Admin/Update%20Pengguna/Screenshot_20230704-233710_Biblio.png) | ![Update Pengguna 2](screenshot/Admin/Update%20Pengguna/Screenshot_20230704-233712_Biblio.png) |
 
 ### 🌙 Dark Theme
 
@@ -185,15 +229,9 @@
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | ![Dark Theme 10](screenshot/Dark%20Theme/Screenshot_20230705-000741.png) | ![Dark Theme 11](screenshot/Dark%20Theme/Screenshot_20230705-000823_Biblio.png) | ![Dark Theme 12](screenshot/Dark%20Theme/Screenshot_20230705-000848_Biblio.png) |
 
-### 🧪 Pengujian Aplikasi
+### 🧪 Pengujian
 
-#### Testing Login
-
-| Login Berhasil                                             | Login Gagal                                          |
-| ---------------------------------------------------------- | ---------------------------------------------------- |
-| ![Login Berhasil](screenshot/Pengujian/Login/berhasil.png) | ![Login Gagal](screenshot/Pengujian/Login/gagal.png) |
-
-#### Testing Registrasi
+#### Daftar
 
 | Daftar Berhasil                                              | Daftar Gagal - Data Kosong                                                 |
 | ------------------------------------------------------------ | -------------------------------------------------------------------------- |
@@ -203,13 +241,19 @@
 | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | ![Email Sudah Dipakai](<screenshot/Pengujian/Daftar/gagal%20(email%20sudah%20dipakai).png>) | ![Password Tidak Cocok](<screenshot/Pengujian/Daftar/gagal%20(passord%20konfirmasi%20tidak%20cocok).png>) |
 
-#### Testing Tambah Buku
+#### Login
+
+| Login Berhasil                                             | Login Gagal                                          |
+| ---------------------------------------------------------- | ---------------------------------------------------- |
+| ![Login Berhasil](screenshot/Pengujian/Login/berhasil.png) | ![Login Gagal](screenshot/Pengujian/Login/gagal.png) |
+
+#### Tambah Buku
 
 | Tambah Buku Berhasil                                                     | Tambah Buku Gagal                                                  |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | ![Tambah Buku Berhasil](screenshot/Pengujian/Tambah%20Buku/berhasil.png) | ![Tambah Buku Gagal](screenshot/Pengujian/Tambah%20Buku/gagal.png) |
 
-#### Testing Tambah Pengguna
+#### Tambah Pengguna
 
 | Tambah Pengguna Berhasil                                                         | Tambah Pengguna Gagal                                                      |
 | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
